@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive-ToramMap</title>
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <link rel="stylesheet" href="src/static.css">
+    
+</head>
+<body>
+    <nav>
+        <!--Different Options and Menu-Points-->
+    </nav>
+
+    <h2>Netzwerk-Visualisierung</h2>
+
+    <div id="search-container">
+        <input type="text" id="search-input" placeholder="Knoten suchen...">
+        <button onclick="searchNode()">Suchen</button>
+    </div>
+
+    <!--GraphArea: Will be enhanced to cover rest of the screen-->
+    <div id="network1" class="network-container"></div>
+
+    <!--Additional Information-->
+    <h3>Zusatzinformationen:</h3>
+    <div id="info-box">Klicke auf einen Knoten, um Details zu sehen.</div>
+</body>
+<script type="text/javascript" src="src/main.js"></script>
+</html>
