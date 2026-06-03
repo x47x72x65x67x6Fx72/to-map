@@ -1,56 +1,95 @@
-       // 1. Daten für das Netzwerk definieren
-        const nodes = new vis.DataSet([
-            { id: 1, label: 'Server A', info: 'Standort: Frankfurt, IP: 192.168.1.1' },
-            { id: 2, label: 'Server B', info: 'Standort: Berlin, IP: 192.168.1.2' },
-            { id: 3, label: 'Datenbank', info: 'PostgreSQL, Hauptdatenbank' }
-        ]);
+/**
+ * This FILE TAKES IN GLOBAL DEFINED networkdata: {nodes: DataSet, edges: DataSet}
+ */
+/** Set References */
+const container = document.getElementById("network");
+const detail = document.getElementById("detail");
 
-        const edges = new vis.DataSet([
-            { from: 1, to: 2 },
-            { from: 2, to: 3 }
-        ]);
 
-        const container = document.getElementById('network1');
-        const data = { nodes: nodes, edges: edges };
-        
-        // 2. Optionen (z.B. Hover aktivieren)
-        const options = {
-            interaction: { hover: true },
-            nodes: { shape: 'dot', size: 16 }
-        };
 
-        // Netzwerk initialisieren
-        const network = new vis.Network(container, data, options);
+// TODO: ÜBERABEITEN
+// Skalierung dynamisch anhand der Canvas-Größe berechnen
+const canvasWidth = container.clientWidth || 800;
+const canvasHeight = container.clientHeight || 600;
 
-        // 3. Klick-Event für Zusatzinformationen
-        network.on("click", function (params) {
-            if (params.nodes.length > 0) {
-                const nodeId = params.nodes[0];
-                const clickedNode = nodes.get(nodeId);
-                document.getElementById('info-box').innerHTML = `<strong>${clickedNode.label}</strong><br>${clickedNode.info}`;
-            }
-        });
+const allNodes = networkdata.nodes.get();
+const maxGridX = Math.max(...allNodes.map(n => n.x || 0));
+const maxGridY = Math.max(...allNodes.map(n => n.y || 0));
 
-        // 4. Suchfunktion
-        function searchNode() {
-            const searchVal = document.getElementById('search-input').value.toLowerCase();
-            if (!searchVal) return;
+const scaleX = (canvasWidth - 100) / (maxGridX > 0 ? maxGridX : 1);
+const scaleY = (canvasHeight - 100) / (maxGridY > 0 ? maxGridY : 1);
+const gridScale = Math.max(Math.min(scaleX, scaleY), 50) * 2; // Abstand zwischen den Nodes verdoppeln
 
-            // Finde den Knoten, dessen Label den Suchbegriff enthält
-            const foundNode = nodes.get({
-                filter: function (item) {
-                    return item.label.toLowerCase().includes(searchVal) || item.info.toLowerCase().includes(searchVal);
-                }
-            });
+// Knoten aus dem Dataset anpassen (skalieren) und zurückschreiben
+const updatedNodes = allNodes.map(node => ({
+    id: node.id,
+    label: node.label || node.name, // Konvertiert "name" automatisch in "label" (für Vis.js)
+    gridX: node.x,                  // Sichert die Originalwerte für die Detail-Anzeige
+    gridY: node.y,
+    x: node.x * gridScale,          // Skalierte Breite
+    y: node.y * gridScale           // Skalierte Höhe
+}));
+networkdata.nodes.update(updatedNodes);
 
-            if (foundNode.length > 0) {
-                // Kamera auf den ersten gefundenen Knoten fokussieren und ihn auswählen
-                network.selectNodes([foundNode[0].id]);
-                network.focus(foundNode[0].id, { scale: 1.5, animation: true });
-                
-                // Info-Box direkt füllen
-                document.getElementById('info-box').innerHTML = `<strong>${foundNode[0].label}</strong><br>${foundNode[0].info}`;
-            } else {
-                alert("Kein Knoten gefunden.");
+
+
+
+/** Setup VIZ-Network */
+const options = {
+    autoResize: false,
+    physics: false,
+    interaction: {
+        hover: true,
+        dragNodes: false
+    },
+    nodes: {
+        shape: 'dot', 
+        size: 16,
+        widthConstraint: {
+            maximum: 100 // Erzwingt einen automatischen Zeilenumbruch, wenn der Text breiter als 100 Pixel ist
+        },
+        font: {
+            size: 12,
+            face: 'Tahoma, Arial'
+        },
+        color: {
+            highlight: {
+                background: '#32cd32',
             }
         }
+    },
+    edges: {
+        smooth: false
+    }
+};
+const network = new vis.Network(container, networkdata, options);
+
+/**Define custom Networkevents*/
+network.on("click", (params) => {
+    if (params.nodes.length > 0) {
+        const nodeId = params.nodes[0];
+        const clickedNode = nodes.get(nodeId);
+
+        detail.innerHTML = `<strong>${clickedNode.label}</strong><br>Grid-Koordinaten: X:${clickedNode.gridX} | Y:${clickedNode.gridY}`;
+    }
+});
+
+
+/** Define search */
+function searchNode() {
+    const searchVal = document.getElementById('search-input').value.toLowerCase();
+    if (!searchVal) return;
+
+    const foundNodes = nodes.get({
+        filter: (item) => {
+            return (item.label || item.name || '').toLowerCase().includes(searchVal) || (item.info || '').toLowerCase().includes(searchVal);
+        }
+    })
+
+    if (foundNodes.length > 0) {
+        network.selectNodes([foundNodes[0].id]);
+        network.focus(foundNodes[0].id);
+
+        detail.innerHTML = `<strong>${foundNodes[0].label}</strong><br>Grid-Koordinaten: X:${foundNodes[0].gridX} | Y:${foundNodes[0].gridY}`;
+    }
+}

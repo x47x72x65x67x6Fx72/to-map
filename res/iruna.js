@@ -1,0 +1,600 @@
+// {id:int, x:int, y:int, name:str, areas:[str], bosses:[str], mobs:[str]}
+// "d": {a:[], b:[], m:[]}
+
+const nodes = new vis.DataSet([
+ 
+    {"id":1, "x":0, "y":15, "label":"Aulada Ancient Tower", "d": {a:[], b:[], m:[]}},
+    {"id":2,"x":1, "y":15, "label":"Debakcy Channel"},
+    {"id":3, "x":1, "y":16, "label":"Athema Ruins"},
+    {"id":4, "x":2, "y":14, "label":"Haotas Ravine"},
+    {"id":10, "x":2, "y":17, "label":"Zoktzda Ruins"},
+    {"id":5, "x":3, "y":15, "label":"Rugio Ruins"},
+    {"id":6, "x":3, "y":14, "label":"Strum Road"},
+    {"id":7, "x":3, "y":13, "label":"Marbaro Forest"},
+    {"id":8, "x":3, "y":16, "label":"Suedor Cliff"},
+    {"id":9, "x":3, "y":17, "label":"Rinom Plains"},
+    {"id":11, "x":3, "y":18, "label":"Ribisco Cave"},
+
+
+
+    {"id":33, "x":4, "y":13, "label":"New Moon Palace"},
+    {"id":31, "x":4, "y":14, "label":"Lutaros Cavern"},
+    {"id":13, "x":4, "y":15, "label":"Nisel Mountain"},
+    {"id":12, "x":4, "y":16, "label":"Icule Lake"},
+    {"id":22, "x":4, "y":17, "label":"Saham Underground Cave"},
+    {"id":21, "x":4, "y":18, "label":"Saham Crater"},
+    {"id":32, "x":5, "y":13, "label":"Nehelo Swamp"},
+    {"id":30, "x":5, "y":14, "label":"Yorl Highlands"},
+    /*{"id":24, "x":6, "y":15, "label":"Underground Channel"},*/
+    {"id":14, "x":5, "y":16, "label":"Ruined Temple Town"},
+    {"id":16, "x":5, "y":17, "label":"Ruined Temple"},
+    {"id":20, "x":5, "y":18, "label":"Korda Basin"},
+    {"id":29, "x":6, "y":14, "label":"Land of Chaos"},
+    {"id":23, "x":6, "y":15, "label":"Sofya City"},
+    {"id":15, "x":6, "y":16, "label":"Rakau Plains"},
+    {"id":17, "x":6, "y":17, "label":"Reug Salt Plains Wanderers Camp"},
+    {"id":19, "x":6, "y":18, "label":"Longo Canyon"},
+
+
+
+    {"id":54, "x":7, "y":12, "label":"Magic Waste Site"},
+    {"id":28, "x":7, "y":13, "label":"Fiery Volcano"},
+    {"id":27, "x":7, "y":14, "label":"Witeka Scorched Plains"},
+    {"id":25, "x":7, "y":15, "label":"Land under Developement"},
+    {"id":47, "x":7, "y":16, "label":"Gate of Another World"},
+    {"id":18, "x":7, "y":17, "label":"Isthmus of Kaus"},
+    {"id":53, "x":8, "y":12, "label":"Teaus Hill"},
+    {"id":35, "x":8, "y":13, "label":"Scaro Town"},
+    {"id":34, "x":8, "y":14, "label":"Douce Hamlet"},
+    {"id":26, "x":8, "y":15, "label":"Underground Ruins"},
+    {"id":46, "x":8, "y":16, "label":"Road to Another world"},
+    {"id":45, "x":8, "y":17, "label":"Vyshed the Tainted Land"},
+    {"id":51, "x":9, "y":12, "label":"Wanderers' Plains"},
+    {"id":52, "x":9, "y":13, "label":"El Scaro"},
+    {"id":36, "x":9, "y":14, "label":"Darkanon Plain"},
+    {"id":37, "x":9, "y":15, "label":"Centerio Highlands"},
+    {"id":38, "x":9, "y":16, "label":"Ancient Empress's Tomb"},
+    {"id":44, "x":9, "y":17, "label":"Fabizo Boundary"},
+    {"id":49, "x":10, "y":12, "label":"Gravel Terrace"},
+    {"id":48, "x":10, "y":13, "label":"Maia Diela"},
+    {"id":39, "x":10, "y":14, "label":"Harde Hill"},
+    {"id":40, "x":10, "y":15, "label":"Figo's Manor"},
+    {"id":42, "x":10, "y":16, "label":"Ethos Fortress"},
+    {"id":43, "x":10, "y":17, "label":"Lost Town"},
+    {"id":50, "x":11, "y":12, "label":"Akaku Desert"},
+    {"id":41, "x":11, "y":15, "label":"Land Under Cultivation"},
+
+
+
+    {"id":95, "x":0, "y":10, "label":"Suburb of Droma Square", "d": {
+        a:["Area 1", "Area 2", "Area 3", "Dorma Square"], 
+        b:["Volotur", "Ultimate Machina"], 
+        m:["Lyark Brawler", "Death Media", "Cannon Golem", "Volo"]}},
+
+    {"id":96, "x":1, "y":9, "label":"Ultimea Palace", "d": {
+        a:["Storage Area 1", "Storage Area 2", "Demi Machina Storage", "Corridor", "Throne"], 
+        b:["Wandering Wheel", "Ornlarf", "Venena The Lil Empress"], 
+        m:["Stavros Machina", "High Tigris", "Lyark Defender", "Wheel Machina"]}},
+
+    {"id":94, "x":1, "y":10, "label":"Ultimea City", "d": {
+        a:["Roof"], 
+        b:[], 
+        m:["Ignis Golem", "Death Media", "Petarma"]}},
+
+    {"id":85, "x":2, "y":7, "label":"Lufenas Mansion", "d": {
+        a:["Entrance", "Corridor", "Library", "Hall"], 
+        b:["Commander Golem", "Zahhak Machina"], 
+        m:["Assault Golem", "Puppet Dragon", "Lyark Vanguard"]}},
+
+    {"id":84, "x":2, "y":8, "label":"Lufenas Mansion: Garden", "d": {
+        a:["Garden"], 
+        b:[], 
+        m:["Tigris Machina", "Lyark Vanguard", "Earl Colon"]}},
+
+    {"id":87, "x":2, "y":9, "label":"Ultimea Sewer: East", "d": {
+        a:["East"], 
+        b:[], 
+        m:["Killer Mouse", "Solider Rat", "Energy Quarz"]}},
+
+    {"id":88, "x":2, "y":10, "label":"Ultimea Sewer: Southeast", "d": {
+        a:["Southeast"], 
+        b:[], 
+        m:["Singing Eye", "Grape Jelly", "Underground Nemico"]}},
+
+    {"id":89, "x":2, "y":11, "label":"Brahe Laboratory", "d": {
+        a:["1st Building", "2nd Building", "3rd Building", "4th Building"], 
+        b:["Guignol"], 
+        m:["Singing Eye", "Moth Machina", "Bio Launcher", "Lyark Specialist", "Retainer Doll", "Mystery Pot", "Parasitized Spider"]}},
+
+    {"id":81, "x":3, "y":7, "label":"Large Demi Machina Factory", "d": {
+        a:["Area 1", "Area 2", "Area 3", "Deepest Part"], 
+        b:["Mozto Machina"], 
+        m:["Ledon Machina", "Golem Guard", "Horn Machina"]}},
+
+    {"id":83, "x":3, "y":8, "label":"Ultimea: Outer Gate", "d": {
+        a:["Outer Gate"], 
+        b:[], 
+        m:[]}},
+
+    {"id":86, "x":3, "y":9, "label":"Hora Diomedea", "d": {
+        a:["Hora Diomeda"], 
+        b:[], 
+        m:["General Store Adala", "Lepage", "General Store Adala", "Blacksmith Liut", "Synthesist Lefe"]}},
+
+    {"id":90, "x":3, "y":10, "label":"Ultimea Sewer: South", "d": {
+        a:["South"], 
+        b:[], 
+        m:["Squnail", "Venomsch", "Mine Digger"]}},
+
+    {"id":91, "x":3, "y":11, "label":"Cuervo Jail", "d": {
+        a:["1st Floor", "2nd Floor", "3rd Floor", "Roof"], 
+        b:["Gwaimol"], 
+        m:["Ghost in the Jail", "Lyark Machine Solider", "Lyark Jailer", "Toy Bolg", ""]}},
+
+    {"id":80, "x":4, "y":7, "label":"Sykea Deep Valley", "d": {
+        a:["Sykea Deep Valley"], 
+        b:[], 
+        m:["Mech Little Boar", "Demi Ork"]}},
+
+    {"id":82, "x":4, "y":8, "label":"Monster's Forest", "d": {
+        a:["Foggy Way", "Animal Trail", "Deep Part", "Tree Way"], 
+        b:["Lalvada"], 
+        m:["Sick Mushroom", "Pecols", "Owlzard", "Nepenthe"]}},
+
+    {"id":92, "x":4, "y":10, "label":"Copia Reservoir", "d": {
+        a:["Copia Reservoir"], 
+        b:[], 
+        m:["Pond Snake", "Copia Rat", "Young Pore"]}},
+
+    {"id":93, "x":4, "y":11, "label":"Buried Tower", "d": {
+        a:["Collapsed Top", "Inside", "Entrance"], 
+        b:["Seraph Machina", "Maton Swoard"], 
+        m:["Mine Digger", "Lost Machina", "Galdon", ""]}},
+
+    {"id":127, "x":4, "y":12, "label":"Dea Ruinea", "d": {
+        a:["Dea Ruinea"], 
+        b:["Demonic Eye"], 
+        m:[]}},
+
+    {"id":78, "x":5, "y":7, "label":"Peligro Landfill", "d": {
+        a:["Peligro Landfill"], 
+        b:[], 
+        m:["Plant Machina", "Kinote", "Petally"]}},
+
+    {"id":79, "x":5, "y":8, "label":"Small Demi Machina Factory", "d": {
+        a:["Area 1", "Area 2", "Area 3", "Core"], 
+        b:["Dusk Machina", "Tyrant Machina"], 
+        m:["Torture Machina", "Rugos Demi Machina", "Fist Machina"]}},
+
+    {"id":128, "x":5, "y":12, "label":"Morga Wasteland", "d": {
+        a:["Area 1", "Area 2", "Area 3", "Deepest Area"], 
+        b:["Demonic Quasar"], 
+        m:["Evil Eye", "Florroractur", "Mummy Golem", "Hellhound", ""]}},
+
+
+
+    {"id":77, "x":6, "y":7, "label":"Singolare Ruins", "d": {
+        a:["1st Floor", "2nd Floor", "3rd Floor"], 
+        b:["Proto Leon"], 
+        m:["Cavern Rat", "Rocksaur", "Cursed Magic Swoard", "Octaray"]}},
+
+    {"id":74, "x":6, "y":8, "label":"Klaspe Slum", "d": {
+        a:["Klaspe Slum"], 
+        b:[], 
+        m:["Duston", "Rat Scavenger", "Slum Potum"]}},
+
+    {"id":75, "x":6, "y":9, "label":"Site of Simcracker", "d": {
+        a:["Site of Simcracker"], 
+        b:[], 
+        m:["Gajo", "Muddy Gnome", "Floral Bee"]}},
+
+    {"id":76, "x":6, "y":10, "label":"Huge Crysta Factory", "d": {
+        a:["1st Floor", "2nd Floor", "3rd Floor", "Storage"], 
+        b:["Builder Golem", "York"], 
+        m:["Crafted Golem", "Clockwork Watcher", "Custos Demi Machina"]}},
+
+    {"id":73, "x":7, "y":7, "label":"Blazing Graben", "d": {
+        a:["Surface", "Upper", "Lower", "Deepest Part"], 
+        b:["Tapir", "Salamander", "Ifrid"], 
+        m:["Wooly", "Bestion", "Baby Salamander", "Sufard", "Blaze Ant"]}},
+
+    {"id":72, "x":7, "y":8, "label":"Artillery Defense Line", "d": {
+        a:["Artillery Defense Line"], 
+        b:["Iconos"], 
+        m:["Greg", "Ornis Demi Mahina"]}},
+
+    {"id":70, "x":7, "y":9, "label":"Fort Solfini"},
+    {"id":97, "x":8, "y":5, "label":"Tolbas Grassland", "d": {
+        a:["Tolbas Grassland"], 
+        b:[], 
+        m:["Lanbat", "Healily", "Molemet"]}},
+
+    {"id":71, "x":8, "y":8, "label":"Einklang", "d": {
+        a:["Einklang"], 
+        b:[], 
+        m:["Senie", "Tnark", "Female Blacksmith", "Woman in Need", "Young Man", "Yumomo"]}},
+
+    {"id":69, "x":8, "y":9, "label":"Polde Ice Valley"}, // TODO: Continue going south
+
+    {"id":57, "x":8, "y":10, "label":"Calle Mort"},
+
+    {"id":55, "x":8, "y":11, "label":"Dunkel Valley"},
+
+
+
+    {"id":98, "x":9, "y":5, "label":"Wazeero Street", "d": {
+        a:["Wazeero Street"], 
+        b:["Grimuckus"], 
+        m:["Tulin", "Biped Frog", "Muckus"]}},
+
+    {"id":135, "x":9, "y":8, "label":"Celarra Plateau"},
+
+    {"id":132, "x":9, "y":9, "label":"Lunagent Cliff Base"},
+
+    {"id":58, "x":9, "y":10, "label":"Lunagent Mountain"},
+
+    {"id":56, "x":9, "y":11, "label":"Abyss of No Return"},
+
+    {"id":99, "x":10, "y":5, "label":"Eryldan Street", "d": {
+        a:["Area 1", "Area 2", "Area 3", "Near the Forest of Ein"], 
+        b:["Tuscog"], 
+        m:["Mille", "Antbee", "Roca", "Wolfret"]}},
+
+    {"id":136, "x":10, "y":8, "label":"Arche Valley"},
+
+    {"id":133, "x":10, "y":9, "label":"Inje Village"},
+
+    {"id":130, "x":10, "y":10, "label":"Geist Desert"},
+
+    {"id":129, "x":10, "y":11, "label":"Lunagent Cliff Base"},
+
+    {"id":134, "x":11, "y":9, "label":"Ducia Coast"},
+
+
+
+    {"id":68, "x":13, "y":9, "label":"Plastida"},
+
+    {"id":59, "x":13, "y":10, "label":"Dark Wasteland"},
+
+    {"id":60, "x":13, "y":11, "label":"Dark Castle"},
+
+    {"id":67, "x":14, "y":9, "label":"Dark Manor"},
+
+    {"id":61, "x":14, "y":10, "label":"Garden of Beginning"},
+
+    /*{"id":59, "x":14, "y":11, "label":"Spring of Rebirth"},*/ // TODO: CHECK IF OVERLAPP
+    {"id":66, "x":15, "y":8, "label":"Cradle of Soldiers"},
+
+    {"id":65, "x":15, "y":9, "label":"Trace of Dark River"},
+
+    {"id":63, "x":15, "y":10, "label":"Dark Mirror"},
+
+    {"id":64, "x":16, "y":10, "label":"Garden of Sublimation", "d": {
+        a:[], 
+        b:[], 
+        m:[]}},
+
+
+
+    {"id":111, "x":3, "y":2, "label":"Shrine of Blessings Gods", "d": {
+        a:["Shrine of the gods Area 1", "Shrine of the gods Area 2", "Shrine of the gods Area 3", "Hall of the Blessings Gods"], 
+        b:["Mardula"], 
+        m:["Destiny Cube", "Bubble Angel", "Gods of Blessing's Guardian", "Zaman"]}},
+
+    {"id":110, "x":3, "y":3, "label":"Barbaros Corridor", "d": {
+        a:["Barbaros Corridor"], 
+        b:["Bubble Bogey"], 
+        m:["Berylfree", "Aternus", "Planet Head"]}},
+
+    {"id":112, "x":4, "y":2, "label":"Heresy Corridor", "d": {
+        a:["Heresy Corridor"], 
+        b:[], 
+        m:["Bubble Angel", "Meditating Potum", "Hermit Doll"]}},
+
+    {"id":109, "x":4, "y":3, "label":"Ruins of Mt. Mithurna", "d": {
+        a:["Stylobate", "Stairs", "Open Air", "Summit"], 
+        b:["Zelbuse"], 
+        m:["Ardvan", "Mitta Tret", "Haliabubo", "Moss Granite"]}},
+
+    {"id":108, "x":4, "y":4, "label":"Forgotten Cave", "d": {
+        a:["Forgotten Cave"], 
+        b:["Mom Fluck"], 
+        m:["Stone", "Melon Soda Potum", "Fluck"]}},
+
+    {"id":115, "x":5, "y":0, "label":"Elf Mountains", "d": {
+        a:["Area 1", "Area 2", "Area 3", "Elf Mountains Shrine"], 
+        b:["King Piton"], 
+        m:["Snowman", "Corloup", "Silveria" ,"Goldenia", "Ice Stinger"]}},
+
+    {"id":114, "x":5, "y":1, "label":"Garden of Ice & Snow", "d": {
+        a:["Garden of Ice & Snow"], 
+        b:[], 
+        m:["Acernix" ,"Snowman", "Billy"]}},
+
+    {"id":113, "x":5, "y":2, "label":"Shrine of Construction Gods", "d": {
+        a:["Shrine of the Gods Area 4", "Hall of Construction Gods", "Hall of Special Gods", "Shrine of the Goddess of Species"], 
+        b:["Seele Zauga"], 
+        m:["Oddy", "Bubble Angel", "Destiny Cube", "Sanctuary Guardian"]}},
+
+    {"id":106, "x":5, "y":3, "label":"Mt. Mithurna: Entrance", "d": {
+        a:["Mt. Mithurna Entrance"], 
+        b:[], 
+        m:["Tenoblepas", "Muddy Gnome", "Tylul"]}},
+
+    {"id":107, "x":5, "y":4, "label":"Rokoko Plains", "d": {
+        a:["Rokoko Plains"], 
+        b:[], 
+        m:["Leedle Colon", "Kijimu", "Tenoblepas"]}},
+
+    {"id":137, "x":5, "y":5, "label":"Rokoko City Ruins", "d": {
+        a:["Rokoko City Ruins"], 
+        b:["Black Shadow"], 
+        m:["Boon", "Coofer"]}},
+
+    {"id":138, "x":5, "y":6, "label":"Witch's Woods", "d": {
+        a:["Area 1", "Area 2", "Area 3", "Depths"], 
+        b:["Grim Reaper Scarecrow", "Hexter"], 
+        m:["Eerie Scarecrow", "Bayaga", "Enty"]}},
+
+    {"id":1116, "x":6, "y":0, "label":"Dark Dragon Shrine", "d": { /**TODO: FIX ID! */
+        a:["Lower", "Middle", "Upper", "Near the Top", "Elf Mountains Watchtower"], 
+        b:["Finstern the Dark Dragon"], 
+        m:["Soul Reaper", "Death Hound", "Ivy", "Baby Finstern"]}},
+
+    {"id":105, "x":6, "y":3, "label":"Curonne Forest: North Area", "d": {
+        a:["Area 1", "Area 2", "Decaying Ruins"], 
+        b:["Crystal Titan"], 
+        m:["Tehon", "Leaf Ghost", "Fanalizard", "Shark Wolf", "Fanadon"]}},
+
+    {"id":116, "x":6, "y":4, "label":"Nov Saterica", "d": {
+        a:["Nov Saterica"], 
+        b:[], 
+        m:["Sentry", "General Store Litoa"]}},
+
+    {"id":139, "x":6, "y":5, "label":"Nezim Wetlands", "d": {
+        a:["Nezim Wetlands"], 
+        b:["Lord of Nezim"], 
+        m:["Strider", "Spirabol", "Kappadon", "Coofer"]}},
+
+    {"id":140, "x":6, "y":6, "label":"Nov Diela", "d": {
+        a:["Area 1", "Area 2",  "Area 3", "Central"], 
+        b:["Trocostida", "Irestida"], 
+        m:["Juvestida", "Walkastida", "Flystida"]}},
+
+    {"id":103, "x":7, "y":4, "label":"Curonne Forest: East", "d": {
+        a:["Curonne Forest East"], 
+        b:[], 
+        m:["Fanalizard", "Squirreen", "Tehon"]}},
+
+    {"id":102, "x":8, "y":4, "label":"Turnus Mine", "d": {
+        a:["Area 1", "Area 2", "Area 3", "Hall"], 
+        b:[], 
+        m:["Pelle", "Molemet", "Solopy", "Light Angler", "Rockmadillo", "Comraby"]}},
+    
+
+
+    {"id":118, "x":9, "y":3, "label":"Fractum Sector", "d": {
+        a:["Area 1", "Area 2", "Area 3", "Brdige Entrance"], 
+        b:["Pyxtica"], 
+        m:["Floragonet", "Moculus", "Corroded Floragonet", "Povidone"]}},
+    
+    {"id":117, "x":9, "y":4, "label":"Fabriska Sector", "d": {
+        a:["Fabriska Sector"], 
+        b:[], 
+        m:["Bombermeow", "Mobster Golem", "Sentreast"]}},
+
+    {"id":122, "x":10, "y":2, "label":"Avant Plastida", "d": {
+        a:["Area 1", "Area 2", "Area 3", "Deepest Area  "], 
+        b:["Bloodie Crystal", "Sapphire Roga"], 
+        m:["Corroded Goblin", "Wandering Blood Crystal", "Strange Tentacle", "Flying Tentacle"]}},
+
+    {"id":101, "x":10, "y":3, "label":"Morthell Swell", "d": {
+        a:["Area 1", "Area 2", "Area 3", "Deep Area"], 
+        b:["Eroded Pilz"], 
+        m:["Rafflesian", "Nectivorider", "Petally", "Kinote", ""]}},
+
+    {"id":100, "x":10, "y":4, "label":"Forest of Ein", "d": {
+        a:["Forest of Ein"], 
+        b:[], 
+        m:["Elizard", "Moss Mole", "Lilliset"]}},
+
+    {"id":131, "x":11, "y":1, "label":"Ruins of Urban Elban", "d": {
+        a:["Ruins of Urban Elban", "Neo Plastida"], 
+        b:["Venena Metacoenubia"], 
+        m:["Stapp", "Cabrigo", "Wallkong", "Tappler"]}},
+
+    {"id":121, "x":11, "y":2, "label":"Dikkit Sector", "d": {
+        a:["Dikkit Sector"], 
+        b:[], 
+        m:["Coryn", "Alpoca", "Baloot"]}},
+
+    {"id":120, "x":11, "y":3, "label":"Labilans Sector", "d": {
+        a:["Area 1", "Area 2", "Area 3", "Square"], 
+        b:["Kuzto"], 
+        m:["Insector", "Toretta", "Laurus", "Alpoca", "Laurus"]}},
+
+    {"id":119, "x":11, "y":4, "label":"Altoale Sector", "d": {
+        a:["Altoale Sector"], 
+        b:[], 
+        m:["Monstletoe", "Mossy Mousey", "Insector"]}},
+
+    {"id":123, "x":12, "y":2, "label":"Pupalov Sector", "d": {
+        a:["Pubalov Sector"], 
+        b:[], 
+        m:["Earustica", "Cadaverustica", "Orustica"]}},
+
+    {"id":124, "x":13, "y":2, "label":"Recetacula Sector", "d": {
+        a:["Area 1", "Area 2", "Area 3", "Depot Rooftop"], 
+        b:["Canemofish", "Gravicep"], 
+        m:["Weltacle", "Actinirania", "Toxinaria", "Bladefish"]}},
+
+    {"id":125, "x":13, "y":3, "label":"Old Lufenas Mansion Ruins", "d": {
+        a:["Old Lufenas Mansion Ruins"], 
+        b:["Tardigrademon"], 
+        m:["Lazulligator", "Marquis Colon", "Tardigrande"]}},
+
+    {"id":126, "x":13, "y":4, "label":"Deltzon Research Zone", "d": {
+        a:["Area 1", "Area 2", "Area 3", "Deepest Area"], 
+        b:["Repthon"], 
+        m:["Swirly Whirly", "Corphibi", "Monoglare"]}}
+]);
+
+const edges = new vis.DataSet([
+    {from: 1, to: 2},
+    {from: 2, to: 3},
+    {from: 2, to: 4},
+    {from: 2, to: 5},
+    {from: 4, to: 5},
+    {from: 5, to: 6},
+    {from: 5, to: 8},
+    {from: 6, to: 7},
+    {from: 8, to: 9},
+    {from: 9, to: 10},
+    {from: 9, to: 11},
+
+    {from: 8, to: 12},
+    {from: 12, to: 13},
+    {from: 12, to: 14},
+    {from: 14, to: 16},
+    {from: 14, to: 15},
+    {from: 15, to: 17},
+    {from: 17, to: 18},
+    {from: 17, to: 19},
+    {from: 19, to: 20},
+    {from: 20, to: 21},
+    {from: 21, to: 22},
+    {from: 15, to: 23},
+    {from: 23, to: 24},
+
+    {from: 29, to: 30},
+    {from: 30, to: 31},
+    {from: 30, to: 32},
+    {from: 32, to: 33},
+
+    {from: 23, to: 25},
+    {from: 25, to: 26},
+    {from: 25, to: 27},
+    {from: 27, to: 29},
+    {from: 27, to: 28},
+    {from: 27, to: 34},
+    {from: 34, to: 35},
+    {from: 34, to: 36},
+    {from: 36, to: 37},
+    {from: 37, to: 38},
+    {from: 36, to: 39},
+
+    {from: 39, to: 40},
+    {from: 40, to: 41},
+    {from: 40, to: 42},
+    {from: 42, to: 43},
+    {from: 43, to: 44},
+    {from: 44, to: 45},
+    {from: 45, to: 46},
+    {from: 46, to: 47},
+
+    {from: 39, to: 48},
+    {from: 48, to: 49},
+    {from: 49, to: 50},
+    {from: 49, to: 129},
+    {from: 129, to: 130},
+    {from: 49, to: 51},
+    {from: 51, to: 52},
+    {from: 51, to: 53},
+    {from: 53, to: 54},
+    {from: 53, to: 55},
+
+    {from: 55, to: 56},
+    {from: 55, to: 57},
+    {from: 57, to: 58},
+    {from: 57, to: 132},
+    {from: 132, to: 135},
+    {from: 135, to: 136},
+    {from: 132, to: 133},
+    {from: 133, to: 134},
+    {from: 57, to: 69},
+
+    {from: 69, to: 70},
+    {from: 69, to: 71},
+    {from: 71, to: 72},
+    {from: 72, to: 73},
+    {from: 72, to: 74},
+    {from: 74, to: 75},
+    {from: 75, to: 76},
+    {from: 74, to: 77},
+    {from: 77, to: 78},
+
+    {from: 78, to: 79},
+    {from: 78, to: 80},
+    {from: 80, to: 81},
+    {from: 80, to: 82},
+    {from: 82, to: 83},
+    {from: 83, to: 84},
+    {from: 84, to: 85},
+    {from: 83, to: 86},
+
+    {from: 86, to: 90},
+    {from: 86, to: 87},
+    {from: 87, to: 96},
+    {from: 87, to: 88},
+    {from: 88, to: 94},
+    {from: 94, to: 95},
+    {from: 88, to: 89},
+    {from: 88, to: 90},
+
+    {from: 90, to: 91},
+    {from: 90, to: 92},
+    {from: 92, to: 93},
+    {from: 93, to: 127},
+    {from: 127, to: 128},
+
+    {from: 71, to: 97},
+    {from: 97, to: 98},
+    {from: 98, to: 99},
+    {from: 99, to: 100},
+    {from: 100, to: 117},
+    {from: 117, to: 118},
+    {from: 100, to: 101},
+    {from: 100, to: 119},
+    {from: 119, to: 120},
+    {from: 120, to: 121},
+    {from: 121, to: 122},
+    {from: 121, to: 131},
+    {from: 121, to: 123},
+    {from: 123, to: 124},
+    {from: 124, to: 125},
+    {from: 125, to: 126},
+
+    {from: 97, to: 102},
+    {from: 102, to: 103},
+    {from: 103, to: 104},
+    {from: 104, to: 105},
+    {from: 105, to: 106},
+    {from: 106, to: 107},
+    {from: 107, to: 108},
+    {from: 107, to: 137},
+    {from: 137, to: 138},
+    {from: 137, to: 139},
+    {from: 139, to: 140},
+    {from: 106, to: 109},
+    {from: 109, to: 110},
+    {from: 111, to: 112},
+    {from: 112, to: 113},
+    {from: 113, to: 114},
+    {from: 114, to: 115},
+    {from: 115, to: 1116},
+
+    {from: 105, to: 116},
+    {from: 103, to: 116},
+
+    {from: 59, to: 60},
+    {from: 59, to: 61},
+    {from: 61, to: 62},
+    {from: 61, to: 63},
+    {from: 63, to: 64},
+    {from: 63, to: 65},
+    {from: 65, to: 66},
+    {from: 65, to: 67},
+    {from: 67, to: 68}
+]);
+        
+const networkdata = { nodes: nodes, edges: edges };

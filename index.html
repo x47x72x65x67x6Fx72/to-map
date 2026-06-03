@@ -1,30 +1,44 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+    <!--Meta-->
     <meta charset="UTF-8">
-    <title>Interactive-ToramMap</title>
-    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
-    <link rel="stylesheet" href="src/static.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A professional static page displaying a network using Vis.js library.">
+    <meta name="author" content="Your Name">
+    <title>Interactive-Map</title>
     
+    <!--Libs, CSS-->
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <link rel="stylesheet" href="src/main.css">
 </head>
+
 <body>
     <nav>
-        <!--Different Options and Menu-Points-->
+        <!--Different Modi Operandi-->
+        <span>Map Viewer</span>
     </nav>
+    <main>
 
-    <h2>Netzwerk-Visualisierung</h2>
+        <div class="options">
+            <!--Section that holds all the elements to modify or e.g. search... -->
+            <div style="display: flex; gap: 8px; align-items: center;">
+                <input type="text" id="search-input" placeholder="Search Node..." onkeyup="if(event.key === 'Enter') searchNode()">
+                <button onclick="searchNode()">Suchen</button>
+            </div>
+        </div>
 
-    <div id="search-container">
-        <input type="text" id="search-input" placeholder="Knoten suchen...">
-        <button onclick="searchNode()">Suchen</button>
-    </div>
+        <div class="content">
+            <!--Section that holds the main content-->
+            <div id="detail" class="detail"><!--Node-Details--></div>
+            <div id="network" class="network"><!--Graph--></div>
+        </div>
 
-    <!--GraphArea: Will be enhanced to cover rest of the screen-->
-    <div id="network1" class="network-container"></div>
 
-    <!--Additional Information-->
-    <h3>Zusatzinformationen:</h3>
-    <div id="info-box">Klicke auf einen Knoten, um Details zu sehen.</div>
-</body>
-<script type="text/javascript" src="src/main.js"></script>
+    </main>
+    <!--JS-->
+    <script type="text/javascript" src="res/iruna.js"></script>
+    <script type="text/javascript" src="src/main.js"></script>
+
+
 </html>
