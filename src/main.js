@@ -4,6 +4,10 @@
 /** Set References */
 const container = document.getElementById("network");
 const detail = document.getElementById("detail");
+const detail_name = document.getElementById("detail_name");
+const detail_area = document.getElementById("detail_area");
+const detail_bosses = document.getElementById("detail_bosses");
+const detail_mobs = document.getElementById("detail_mobs");
 
 
 
@@ -23,11 +27,9 @@ const gridScale = Math.max(Math.min(scaleX, scaleY), 50) * 2; // Abstand zwische
 // Knoten aus dem Dataset anpassen (skalieren) und zurückschreiben
 const updatedNodes = allNodes.map(node => ({
     id: node.id,
-    label: node.label || node.name, // Konvertiert "name" automatisch in "label" (für Vis.js)
-    gridX: node.x,                  // Sichert die Originalwerte für die Detail-Anzeige
-    gridY: node.y,
-    x: node.x * gridScale,          // Skalierte Breite
-    y: node.y * gridScale           // Skalierte Höhe
+    label: node.label,
+    x: node.x * gridScale,
+    y: node.y * gridScale
 }));
 networkdata.nodes.update(updatedNodes);
 
@@ -49,8 +51,9 @@ const options = {
             maximum: 100 // Erzwingt einen automatischen Zeilenumbruch, wenn der Text breiter als 100 Pixel ist
         },
         font: {
+            color: '#ffffff', // Macht die Schrift reinweiß
             size: 12,
-            face: 'Tahoma, Arial'
+            face: 'Tahoma, Arial',
         },
         color: {
             highlight: {
@@ -70,7 +73,13 @@ network.on("click", (params) => {
         const nodeId = params.nodes[0];
         const clickedNode = nodes.get(nodeId);
 
-        detail.innerHTML = `<strong>${clickedNode.label}</strong><br>Grid-Koordinaten: X:${clickedNode.gridX} | Y:${clickedNode.gridY}`;
+        detail_name.innerHTML = clickedNode.label;
+        detail_area.innerHTML = `Areas:<ul>${clickedNode.d.a.map(el => `<li>${el}</li>`).join('')}</ul>`;
+        detail_bosses.innerHTML = `Bosses:<ul>${clickedNode.d.b.map(el => `<li>${el}</li>`).join('')}</ul>`;
+        detail_mobs.innerHTML = `Mobs:<ul>${clickedNode.d.m.map(el => `<li>${el}</li>`).join('')}</ul>`;
+        detail.style = "display:flex";
+    } else {
+        detail.style = '';
     }
 });
 
@@ -81,8 +90,11 @@ function searchNode() {
     if (!searchVal) return;
 
     const foundNodes = nodes.get({
-        filter: (item) => {
-            return (item.label || item.name || '').toLowerCase().includes(searchVal) || (item.info || '').toLowerCase().includes(searchVal);
+        filter: (node) => {
+            return (node.label).toLowerCase().includes(searchVal) 
+            || node.d.a.some(text => toLowerCase().includes(searchVal))
+            || node.d.b.some(text => toLowerCase().includes(searchVal))
+            || node.d.m.some(text => toLowerCase().includes(searchVal));
         }
     })
 
@@ -90,6 +102,10 @@ function searchNode() {
         network.selectNodes([foundNodes[0].id]);
         network.focus(foundNodes[0].id);
 
-        detail.innerHTML = `<strong>${foundNodes[0].label}</strong><br>Grid-Koordinaten: X:${foundNodes[0].gridX} | Y:${foundNodes[0].gridY}`;
+        detail_name.innerHTML = foundNodes[0].label;
+        detail_area.innerHTML = `Areas:<ul>${foundNodes[0].d.a.map(el => `<li>${el}</li>`).join('')}</ul>`;
+        detail_bosses.innerHTML = `Bosses:<ul>${foundNodes[0].d.b.map(el => `<li>${el}</li>`).join('')}</ul>`;
+        detail_mobs.innerHTML = `Mobs:<ul>${foundNodes[0].d.m.map(el => `<li>${el}</li>`).join('')}</ul>`;
+        detail.style = "display:flex";
     }
 }
