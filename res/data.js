@@ -751,69 +751,69 @@ const nodes = new vis.DataSet([
 // x >= 25
 ///////////////////////////////////////////////////////////////////////////////
     {"id":1001, "x":25, "y":7, "label":"Operation Zone", "d": {
-        "a":[], 
-        "b":[], 
-        "m":[]}},
+        "a":["Power Control Area", "Residential Area", "Climate Control Area", "Cockpit Area"], 
+        "b":["Brassozard", "Trickster Dragon Mimyugon"], 
+        "m":["Brasso", "Spaleon", "Smocky", "Tarmuckus"]}},
 
     {"id":1002, "x":26, "y":7, "label":"Freight Corridor", "d": {
-        "a":[], 
+        "a":["Freight Corridor"], 
         "b":[], 
-        "m":[]}},
+        "m":["Wymax", "Pilferrel", "Eyeloon"]}},
     
     {"id":1003, "x":27, "y":5, "label":"Weredragons' Vital Point", "d": {
-        "a":[], 
-        "b":[], 
-        "m":[]}},
+        "a":["Area 1", "Area 2", "Royal Dragon Cocoon Chamber"], 
+        "b":["Filrocas"], 
+        "m":["Phasis", "Voluto", "Oris"]}},
 
     {"id":1004, "x":27, "y":6, "label":"Stairway to Vital Point", "d": {
-        "a":[], 
-        "b":[], 
-        "m":[]}},
+        "a":["Stairway to Vital Point"], 
+        "b":["Exdocus"], 
+        "m":["Octaray", "Corroded Dragist", "Plodocus"]}},
 
     {"id":1005, "x":27, "y":7, "label":"Nebula Plain", "d": {
-        "a":[], 
+        "a":["Nebula Plain"], 
         "b":[], 
-        "m":[]}},
+        "m":["Birdieman", "Bombor", "Mist Roar"]}},
 
     {"id":1006, "x":27, "y":8, "label":"Boma Moja", "d": {
-        "a":[], 
-        "b":[], 
-        "m":[]}},
+        "a":["Area 1", "Area 2", "Area 3", "Village Center"], 
+        "b":["Burning Dragon Igneus"], 
+        "m":["Guffin", "Serpentragon", "Catagon", "Megadon"]}},
 
     {"id":1007, "x":28, "y":4, "label":"Frozen Falls", "d": {
-        "a":[], 
-        "b":[], 
-        "m":[]}},
+        "a":["Area 1", "Area 2", "Area 3"], 
+        "b":["Dominaredor"], 
+        "m":["Lylila", "Mycelia", "Cryophin"]}},
 
     {"id":1008, "x":28, "y":5, "label":"Algid Passage", "d": {
-        "a":[], 
+        "a":["Algid Passage"], 
         "b":[], 
-        "m":[]}},
+        "m":["Glafur", "Breppa", "Wolfelar"]}},
 
     {"id":1009, "x":28, "y":6, "label":"Jabali Kubwa", "d": {
-        "a":[], 
-        "b":[], 
-        "m":[]}},
+        "a":["Area 1", "Area 2", "Area 3", "Summit"], 
+        "b":["Walican"], 
+        "m":["Konetz", "Rosemee", "Kiton"]}},
 
     {"id":1010, "x":28, "y":7, "label":"Draco Town", "d": {
-        "a":[], 
+        "a":["Draco Town"], 
         "b":[], 
         "m":[]}},
 
-    {"id":1011, "x":28, "y":9, "label":"Buma Konda", "d": {
-        "a":[], 
-        "b":[], 
-        "m":[]}},
+    {"id":1011, "x":28, "y":9, "label":"Boma Konda", "d": {
+        "a":["Underground Area", "Village Center"], 
+        "b":["Charugon", "Brass Dragon Reguitam"], 
+        "m":["Drail", "Disaur", "Charuga"]}},
     
     {"id":1012, "x":29, "y":1, "label":"Eumano Glade", "d": {
-        "a":[], 
-        "b":[], 
-        "m":[]}},
+        "a":["Eumano Glade"], 
+        "b":["Gordo"], 
+        "m":["Ostrich", "MogKey", "Grass Tapir"]}},
 
     {"id":1013, "x":29, "y":2, "label":"Prime Ramus", "d": {
-        "a":[], 
-        "b":[], 
-        "m":[]}},
+        "a":["Area 1", "Area 2", "Area 3", "Village"], 
+        "b":["War Dragon Turba"], 
+        "m":["Torturock", "Tackal", "Langur"]}},
 
     {"id":1014, "x":29, "y":4, "label":"Divido Valley", "d": {
         "a":[], 
@@ -821,103 +821,104 @@ const nodes = new vis.DataSet([
         "m":[]}},
 
     {"id":1015, "x":29, "y":5, "label":"Arstida", "d": {
-        "a":[], 
-        "b":[], 
-        "m":[]}},
+        "a":["Depths", "Area 1", "Area 2"], 
+        "b":["Glaucius", "Velum"], 
+        "m":["Grigori", "Glaucio", "Tetracle", ""]}},
+  
 
     {"id":1016, "x":29, "y":6, "label":"Kabla Jabali", "d": {
-        "a":[], 
+        "a":["Kabla Jabali"], 
         "b":[], 
-        "m":[]}},
+        "m":["Scheff", "Petraceras", "Gemare"]}},
     
     {"id":1017, "x":29, "y":7, "label":"Weredragon's Throat", "d": {
-        "a":[], 
+        "a":["Werdragons's Throat"], 
         "b":[], 
-        "m":[]}},
+        "m":["Stonzard", "Walkissa", "Stonezard", "Seaney", "Ocello"]}},
 
     {"id":1018, "x":29, "y":8, "label":"Tunnel of Trails", "d": {
-        "a":[], 
+        "a":["Tunnel of Trails"], 
         "b":[], 
-        "m":[]}},
+        "m":["Caverant", "Tailgon", "Laduro"]}},
 
     {"id":1019, "x":29, "y":9, "label":"Boma Konda: Entrance", "d": {
-        "a":[], 
+        "a":["Entrance"], 
         "b":[], 
-        "m":[]}},
+        "m":["Boma Owl", "Inoz", "Lettacia", ""]}},
 
     {"id":1020, "x":30, "y":1, "label":"Storage Yard", "d": {
-        "a":[], 
-        "b":[], 
-        "m":[]}},
+        "a":["Area 1", "Area 2", "Arena"], 
+        "b":["Bullamius", "Junior Dragon Zyvio"], 
+        "m":["Wood Mouse", "Dryanymon", "Zimius", ""]}},
 
     {"id":1021, "x":30, "y":2, "label":"Country Road", "d": {
-        "a":[], 
+        "a":["Country Road"], 
         "b":[], 
-        "m":[]}},
+        "m":["Izuna", "Bo Peep", "Georaven"]}},
 
     {"id":1022, "x":30, "y":3, "label":"Erva Tronc", "d": {
-        "a":[], 
+        "a":["Erva Tronc"], 
         "b":[], 
         "m":[]}},
     
     {"id":1023, "x":30, "y":4, "label":"Flumen Plains", "d": {
-        "a":[], 
+        "a":["Flumen Plains"], 
         "b":[], 
-        "m":[]}},
+        "m":["Booboo", "Treemit", "Treekat"]}},
 
     {"id":1024, "x":30, "y":5, "label":"Vulcani Foothills", "d": {
-        "a":[], 
+        "a":["Vulcani Foothills"], 
         "b":[], 
-        "m":[]}},
+        "m":["Dodos", "Denden"]}},
 
     {"id":1025, "x":30, "y":6, "label":"Vulcani Underground Passage", "d": {
-        "a":[], 
+        "a":["Vulcani Underground Passage"], 
         "b":[], 
-        "m":[]}},
+        "m":["Cormorant", "Octoeras", "Skullpion"]}},
     
     {"id":1026, "x":30, "y":7, "label":"Milcaska Falls", "d": {
-        "a":[], 
-        "b":[], 
-        "m":[]}},
+        "a":["Weredragon's Mouth", "Army Base", "Waterfall"], 
+        "b":["Gordel"], 
+        "m":["Coccus", "Nuemon", "Omitan"]}},
 
     {"id":1027, "x":30, "y":8, "label":"Propulsion System Zone", "d": {
-        "a":[], 
-        "b":[], 
-        "m":[]}},
+        "a":["Power Converter", "Power Tank", "Propulsion System Room"], 
+        "b":["Trus", "Wicked Dragon Fazzino"], 
+        "m":["Lavabat", "Elecita", "Boulderock"]}},
 
     {"id":1028, "x":31, "y":3, "label":"Guardian Forest", "d": {
-        "a":[], 
-        "b":[], 
-        "m":[]}},
+        "a":["Outer Area", "Giant Tree", "Inner Area", "Lost Woods"], 
+        "b":["Ferzen the Rock Dragon"], 
+        "m":["Egguania", "Dionea", "Smilodocanis"]}},
 
     {"id":1029, "x":31, "y":4, "label":"Movere Specula", "d": {
-        "a":[], 
+        "a":["Movere Specula"], 
         "b":[], 
-        "m":[]}},
+        "m":["Arigazella", "Arhinotopas", "Guttata"]}},
     
     {"id":1030, "x":31, "y":5, "label":"Mt. Vulcani", "d": {
-        "a":[], 
-        "b":[], 
-        "m":[]}},
+        "a":["Area 1", "Area 2", "Area 3", "Summit"], 
+        "b":["Oculasignio"], 
+        "m":["Bitum", "Tepipotamus", "Geomal"]}},
 
     {"id":1031, "x":31, "y":6, "label":"Vulcani Crater Base", "d": {
-        "a":[], 
-        "b":[], 
-        "m":[]}},
+        "a":["Vulcani Crater Base"], 
+        "b":["Ignitrus"], 
+        "m":["Cormorant", "Ignios", "Acamia"]}},
 
     {"id":1032, "x":32, "y":4, "label":"Fugitive Lake Swamp", "d": {
-        "a":[], 
-        "b":[], 
-        "m":[]}},
+        "a":["Area 1", "Area 2", "Area 3", "Depths"], 
+        "b":["Rhinosaur", "Gemma"], 
+        "m":["Lake Rana", "Hippopo", "Rhinoceros", "Rollitida", ]}},
 
     {"id":1033, "x":32, "y":5, "label":"Noisy Woodland", "d": {
-        "a":[], 
+        "a":["Noisy Woodland"], 
         "b":[], 
-        "m":[]}},
+        "m":["Obsidian Lizard", "Hippopo", "Boarlet"]}},
 
     {"id":1034, "x":33, "y":5, "label":"Mana Waterfront", "d": {
-        "a":[], 
-        "b":[], 
+        "a":["Mana Waterfront"], 
+        "b":["Reliza"], 
         "m":[]}},
     
 
@@ -925,7 +926,7 @@ const nodes = new vis.DataSet([
     
 
     {"id":1100, "x":33, "y":7, "label":"Wind Ark", "d": {
-        "a":[], 
+        "a":["Wind Ark"], 
         "b":[], 
         "m":[]}},
 
@@ -934,211 +935,211 @@ const nodes = new vis.DataSet([
 
 
     {"id":1101, "x":32, "y":9, "label":"Labrum Atoll", "d": {
-        "a":[], 
+        "a":["Labrum Atoll"], 
         "b":[], 
-        "m":[]}},
+        "m":["Atoble", "Coraxic", "Coquilatoll", ""]}},
     
     {"id":1102, "x":32, "y":11, "label":"Marinatown", "d": {
-        "a":[], 
-        "b":[], 
-        "m":[]}},
+        "a":["Area 1", "Area 2", "Area 3", "Gigant Plastida"], 
+        "b":["Doridodi", "Humida"], 
+        "m":["Sea Puffer", "Corroded Rana"]}},
 
     {"id":1103, "x":33, "y":9, "label":"Puerta Islands", "d": {
-        "a":[], 
-        "b":[], 
-        "m":[]}},
+        "a":["Area 1", "Area 2", "Area 3", "Adit"], 
+        "b":["Vodre", "Zapo"], 
+        "m":["Voda", "Dakinia", "Melkid"]}},
 
     {"id":1104, "x":33, "y":10, "label":"Subma Cave", "d": {
-        "a":[], 
-        "b":[], 
-        "m":[]}},
+        "a":["Subma Cave"], 
+        "b":[],
+        "m":["Alipipi", "Forbigosta", "Bafficat"]}},
 
     {"id":1105, "x":33, "y":11, "label":"Carretera Mar", "d": {
-        "a":[], 
+        "a":["Carretera Mar"], 
         "b":[], 
-        "m":[]}},
+        "m":["Holocan", "Pterois", "Doridi"]}},
 
     {"id":1106, "x":34, "y":10, "label":"Espuma Dome", "d": {
-        "a":[], 
-        "b":[], 
-        "m":[]}},
+        "a":["Area 1", "Area 2", "Area 3", "Entrance"], 
+        "b":["Fantica", "Red Ash Dragon Rudis"], 
+        "m":["Gronio", "Madrago", "Famarin"]}},
 
     {"id":1107, "x":34, "y":11, "label":"Aquacity", "d": {
-        "a":[], 
-        "b":[], 
+        "a":["Aquacity", "Parliament Hall"], 
+        "b":["Torexesa"], 
         "m":[]}},
     
     {"id":1108, "x":34, "y":12, "label":"Pipeline Corridor", "d": {
-        "a":[], 
+        "a":["Pipeline Corridor"], 
         "b":[], 
-        "m":[]}},
+        "m":["Neeburn", "Brekz", "Trast", ""]}},
 
     {"id":1109, "x":34, "y":13, "label":"Little Shrine of Grace", "d": {
-        "a":[], 
-        "b":[], 
-        "m":[]}},
+        "a":["Area 1", "Area 2", "Area 3", "Sanctuary"], 
+        "b":["Jivaw", "Raging Dragon Bovinari"], 
+        "m":["Apapat", "Swanaga", "Fladroga"]}},
 
     {"id":1110, "x":35, "y":11, "label":"Seabed", "d": {
-        "a":[], 
-        "b":[], 
-        "m":[]}},
+        "a":["Seabed"], 
+        "b":[""], 
+        "m":["Naticlaw", "Anchorsea", "Maringer"]}},
 
-    {"id":1111, "x":35, "y":12, "label":"Path of the Seep Sea", "d": {
-        "a":[], 
+    {"id":1111, "x":35, "y":12, "label":"Path of the Deep Sea", "d": {
+        "a":["Path of the Deep Sea"], 
         "b":[], 
-        "m":[]}},
+        "m":["Spumae", "Fangs", "Corroded Starfish"]}},
 
     {"id":1112, "x":35, "y":13, "label":"Deep Sea", "d": {
-        "a":[], 
-        "b":[], 
-        "m":[]}},
+        "a":["Zone 1", "Zone 2", "Zone 3", "Deepest Zone"], 
+        "b":["Vatudo"], 
+        "m":["Spirulida", "Frilled Shark Potum", "Coelacans", "Helicina"]}},
 
     {"id":1113, "x":36, "y":11, "label":"Abandoned District", "d": {
-        "a":[], 
-        "b":[], 
-        "m":[]}},
+        "a":["Area 1", "Area 2", "Area 3", "Ruin Summit"], 
+        "b":["Don Profundo"], 
+        "m":["Anglerfish", "Actilunia", "Profundo"]}},
     
 
 
 
     {"id":1200, "x":34, "y":5, "label":"Lixaro Ghost Town", "d": {
-        "a":[], 
-        "b":[], 
-        "m":[]}},
+        "a":["Road", "Urban Area", "Garden"], 
+        "b":["Supreme Evil Crysta Beast"], 
+        "m":["Black Lixi", "Beast Lixi", "Mad Beast Lixi"]}},
 
     {"id":1201, "x":35, "y":5, "label":"Lixaro Ghost Town: Entrance", "d": {
-        "a":[], 
+        "a":["Entrance"], 
         "b":[], 
-        "m":[]}},
+        "m":["Dark Lixi", "Corroded Lixi", "Rockie"]}},
 
     {"id":1202, "x":35, "y":6, "label":"Vanek Plains", "d": {
-        "a":[], 
+        "a":["Vanek Plains"], 
         "b":[], 
-        "m":[]}},
+        "m":["Saurloon", "Skelebone", "Conoppy"]}},
 
     {"id":1203, "x":35, "y":7, "label":"Afval Uplands", "d": {
-        "a":[], 
-        "b":[], 
-        "m":[]}},
+        "a":["Area 1", "Area 2", "Area 3", "Summit"], 
+        "b":["Bakuzan"], 
+        "m":["Bandit Lackey", "Moss Ball", "Tepeco"]}},
 
     {"id":1204, "x":36, "y":4, "label":"Eumano Village Ruins", "d": {
-        "a":[], 
-        "b":[], 
-        "m":[]}},
+        "a":["Area 1", "Area 2", "Area 3", "Central"], 
+        "b":["Wiltileaf", ""], 
+        "m":["Corroded Eumano", "Borior", "Terratulin", "Deformis", ""]}},
 
     {"id":1205, "x":36, "y":5, "label":"Perdida Wasteland", "d": {
-        "a":[], 
+        "a":["Perida Wastelands"], 
         "b":[], 
-        "m":[]}},
+        "m":["Magmanus", "Lileaf", "Venofly"]}},
 
     {"id":1206, "x":36, "y":6, "label":"Menabra Plains", "d": {
-        "a":[], 
+        "a":["Menabra Plains"], 
         "b":[], 
-        "m":[]}},
+        "m":["Delphi", "Mesoside", "Orchis"]}},
     
     {"id":1207, "x":37, "y":4, "label":"Siccus Plains", "d": {
-        "a":[], 
+        "a":["Siccus Plains"], 
         "b":[], 
-        "m":[]}},
+        "m":["Pojo", "Nygana", "Rosalila"]}},
 
     {"id":1208, "x":37, "y":6, "label":"Latum Wetlands", "d": {
-        "a":[], 
+        "a":["Latum Wetlands"], 
         "b":[], 
-        "m":[]}},
+        "m":["Crestollar", "Romyzon", "Flying Tentacle"]}},
 
     {"id":1209, "x":37, "y":7, "label":"Div Aqua Jungle", "d": {
-        "a":[], 
+        "a":["Area 1", "Area 2", "Area 3", "Depths"], 
         "b":[], 
-        "m":[]}},
+        "m":["Platio", "Inosin", "Strikey"]}},
 
     {"id":1210, "x":38, "y":4, "label":"Umidus Valley", "d": {
-        "a":[], 
-        "b":[], 
-        "m":[]}},
+        "a":["Area 1", "Area 2", "Area 3", "Cliff Path"], 
+        "b":["Menti", "Dandolion"], 
+        "m":["Raptar", "Brakz", "Coofer"]}},
 
     {"id":1211, "x":38, "y":6, "label":"Aquastida", "d": {
-        "a":[], 
-        "b":[], 
-        "m":[]}},
+        "a":["Entrance", "Corridor", "Inner Ward", "Central"], 
+        "b":["Biskyva"], 
+        "m":["Povidone", "Selachi", "Hydro", "Meduso"]}},
 
     {"id":1212, "x":38, "y":7, "label":"Vicus Mutans", "d": {
-        "a":[], 
-        "b":[], 
-        "m":[]}},
+        "a":["Area 1", "Area 2", "Area 3", "Square"], 
+        "b":["Piscruva"], 
+        "m":["Floral Bee", "Alpoca", "Torpo"]}},
 
     
 
 
     
     {"id":1300, "x":41, "y":4, "label":"Lakas Coast", "d": {
-        "a":[], 
+        "a":["Lakas Coast"], 
         "b":[], 
-        "m":[]}},
+        "m":["Pain Leaf", "Gavial", "Buffish", "w"]}},
 
     {"id":1301, "x":42, "y":4, "label":"Nebbia Coast", "d": {
-        "a":[], 
-        "b":[], 
-        "m":[]}},
+        "a":["Area 1", "Area 2", "Area 3", "Rocky Area"], 
+        "b":["Rondine"], 
+        "m":["Lutriz", "Marek", "Czarmon"]}},
 
     {"id":1302, "x":43, "y":0, "label":"Wizka Forest", "d": {
-        "a":[], 
-        "b":[], 
-        "m":[]}},
+        "a":["Entrance", "Central Area", "Inner Area", "Depths"], 
+        "b":["Grandanbit", "Doy & Mari"], 
+        "m":["Madape", "Danbit", "Dendro"]}},
 
     {"id":1303, "x":43, "y":4, "label":"Raden Tower: Entrance", "d": {
-        "a":[], 
+        "a":["Entrance"], 
         "b":[], 
-        "m":[]}},
+        "m":["Turbulex", "Wahid", "Jawbar"]}},
 
     {"id":1304, "x":43, "y":5, "label":"Raden Tower", "d": {
-        "a":[], 
-        "b":[], 
-        "m":[]}},
+        "a":["Floor 1", "Floor 2", "Top Floor"], 
+        "b":["Gula"], 
+        "m":["Vela", "Manehar", "Squnail", ""]}},
     
     {"id":1305, "x":44, "y":0, "label":"Ruhig Trail", "d": {
-        "a":[], 
+        "a":["Ruhig Trail"], 
         "b":[], 
-        "m":[]}},
+        "m":["Chapone", "Monapaz", "Carakara"]}},
 
     {"id":1306, "x":44, "y":2, "label":"Floriso Trail", "d": {
-        "a":[], 
+        "a":["Floriso Trail"], 
         "b":[], 
-        "m":[]}},
+        "m":["Thodira", "Pecora", "Neckin"]}},
 
     {"id":1307, "x":44, "y":3, "label":"Rode Zaag Range", "d": {
-        "a":[], 
-        "b":[], 
-        "m":[]}},
+        "a":["Foothills", "Animal Trail", "Hillside", "Spirit Tree Sanctum"], 
+        "b":["Puiet"], 
+        "m":["Priona", "Night Mushroom", "Solvay"]}},
 
     {"id":1308, "x":44, "y":4, "label":"Asezara Plains", "d": {
-        "a":[], 
-        "b":[], 
-        "m":[]}},
+        "a":["Asezara Plains"], 
+        "b":["Brahma"], 
+        "m":["Kijimu", "Chan", "Vallaria"]}},
 
     {"id":1309, "x":44, "y":5, "label":"Raden Tower: Air Vent", "d": {
-        "a":[], 
-        "b":[], 
-        "m":[]}},
+        "a":["Area 1", "Area 2", "Area 3", "Air Vent Exit"], 
+        "b":["Goudvism"], 
+        "m":["Blue Jelly", "Umang", "Rana Knight"]}},
 
     {"id":1310, "x":45, "y":0, "label":"Grazen Forecount", "d": {
-        "a":[], 
+        "a":["Grazen Forecourt"], 
         "b":[], 
-        "m":[]}},
+        "m":["Mymeon", "Pico", "Lavulago", "Aralago"]}},
 
     {"id":1311, "x":45, "y":1, "label":"Izulara Underground Passage", "d": {
-        "a":[], 
-        "b":[], 
-        "m":[]}},
+        "a":["Area 1", "Area 2", "Area 3"], 
+        "b":["Dark Spinebore"], 
+        "m":["Zamlun", "Spinebore", "Agatick"]}},
 
     {"id":1312, "x":45, "y":2, "label":"Fango Village", "d": {
-        "a":[], 
-        "b":[], 
-        "m":[]}},
+        "a":["Fango Village"], 
+        "b":["Gioco"], 
+        "m":["Comorio", "Sakara"]}},
 
     {"id":1313, "x":46, "y":0, "label":"Grazen Tower", "d": {
-        "a":[], 
-        "b":[], 
-        "m":[]}}
+        "a":["Level 1", "Level 2", "Level 3", "Top Floor"], 
+        "b":["Baratok"], 
+        "m":["Grazen Guard", "Tanti", "Nemico"]}}
 ]);
 
 const edges = new vis.DataSet([
@@ -1363,7 +1364,7 @@ const edges = new vis.DataSet([
     {from: 1200, to: 1201},
     {from: 1202, to: 1203},
     {from: 1201, to: 1205},
-    {from: 1202, to: 1226},
+    {from: 1202, to: 1206},
 
     {from: 1204, to: 1205},
     {from: 1205, to: 1206},
@@ -1389,6 +1390,7 @@ const edges = new vis.DataSet([
     {from: 1307, to: 1306},
     {from: 1306, to: 1312},
     {from: 1312, to: 1311},
+
 ]);
         
 const networkdata = { nodes: nodes, edges: edges };

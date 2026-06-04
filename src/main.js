@@ -74,10 +74,10 @@ network.on("click", (params) => {
         const clickedNode = nodes.get(nodeId);
 
         // Update Detail-Content with clicked nodes data
-        detail_name.innerHTML = clickedNode.label;
-        detail_area.innerHTML = `Areas:<ul>${clickedNode.d.a.map(el => `<li>${el}</li>`).join('')}</ul>`;
-        detail_bosses.innerHTML = `Bosses:<ul>${clickedNode.d.b.map(el => `<li>${el}</li>`).join('')}</ul>`;
-        detail_mobs.innerHTML = `Mobs:<ul>${clickedNode.d.m.map(el => `<li>${el}</li>`).join('')}</ul>`;
+        detail_name.innerHTML =`<a href="https://coryn.club/map.php?name=${clickedNode.label}" target="_blank" rel="noopener noreferrer">${clickedNode.label}</a></li>`
+        detail_area.innerHTML = `Areas:<ul>${clickedNode.d.a.map(el => `<li></li>`).join('')}</ul>`;
+        detail_bosses.innerHTML = `Bosses:<ul>${clickedNode.d.b.map(el => `<li><a href="https://coryn.club/monster.php?name=${el}" target="_blank" rel="noopener noreferrer">${el}</a></li>`).join('')}</ul>`;
+        detail_mobs.innerHTML = `Mobs:<ul>${clickedNode.d.m.map(el => `<li><a href="https://coryn.club/monster.php?name=${el}" target="_blank" rel="noopener noreferrer">${el}</a></li>`).join('')}</ul>`;
         detail.style = "display:flex";
     } else {
         detail.style = ''; // Hide
@@ -106,10 +106,10 @@ function searchNode() {
         network.selectNodes([foundNodes[0].id]);
         network.focus(foundNodes[0].id);
 
-        detail_name.innerHTML = foundNodes[0].label;
+        detail_name.innerHTML = `<a href="https://coryn.club/map.php?name=${foundNodes[0].label}" target="_blank" rel="noopener noreferrer">${foundNodes[0].label}</a></li>`;
         detail_area.innerHTML = `Areas:<ul>${foundNodes[0].d.a.map(el => `<li>${el}</li>`).join('')}</ul>`;
-        detail_bosses.innerHTML = `Bosses:<ul>${foundNodes[0].d.b.map(el => `<li>${el}</li>`).join('')}</ul>`;
-        detail_mobs.innerHTML = `Mobs:<ul>${foundNodes[0].d.m.map(el => `<li>${el}</li>`).join('')}</ul>`;
+        detail_bosses.innerHTML = `Bosses:<ul>${foundNodes[0].d.b.map(el => `<li><a href="https://coryn.club/monster.php?name=${el}" target="_blank" rel="noopener noreferrer">${el}</a></li>`).join('')}</ul>`;
+        detail_mobs.innerHTML = `Mobs:<ul>${foundNodes[0].d.m.map(el => `<li><a href="https://coryn.club/monster.php?name=${el}" target="_blank" rel="noopener noreferrer">${el}</a></li>`).join('')}</ul>`;
         detail.style = "display:flex";
     }
 }
