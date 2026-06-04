@@ -75,7 +75,7 @@ network.on("click", (params) => {
 
         // Update Detail-Content with clicked nodes data
         detail_name.innerHTML =`<a href="https://coryn.club/map.php?name=${clickedNode.label}" target="_blank" rel="noopener noreferrer">${clickedNode.label}</a></li>`
-        detail_area.innerHTML = `Areas:<ul>${clickedNode.d.a.map(el => `<li></li>`).join('')}</ul>`;
+        detail_area.innerHTML = `Areas:<ul>${clickedNode.d.a.map(el => `<li>${el}</li>`).join('')}</ul>`;
         detail_bosses.innerHTML = `Bosses:<ul>${clickedNode.d.b.map(el => `<li><a href="https://coryn.club/monster.php?name=${el}" target="_blank" rel="noopener noreferrer">${el}</a></li>`).join('')}</ul>`;
         detail_mobs.innerHTML = `Mobs:<ul>${clickedNode.d.m.map(el => `<li><a href="https://coryn.club/monster.php?name=${el}" target="_blank" rel="noopener noreferrer">${el}</a></li>`).join('')}</ul>`;
         detail.style = "display:flex";
