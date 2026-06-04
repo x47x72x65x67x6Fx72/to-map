@@ -43,7 +43,7 @@ main {
     background-color: #1e1e1e; 
     
     /* 2. Das prozedurale Punktraster via CSS-Gradient */
-    background-image: radial-gradient(#242424 1.5px, transparent 1.5px);
+    background-image: radial-gradient(#333333 1.5px, transparent 1.5px);
     
     /* 3. Der Abstand der Punkte (Größe der "Kacheln") */
     background-size: 30px 30px;

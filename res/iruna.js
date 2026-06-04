@@ -3,66 +3,283 @@
 
 const nodes = new vis.DataSet([
  
-    {"id":1, "x":0, "y":15, "label":"Aulada Ancient Tower", "d": {a:[], b:[], m:[]}},
-    {"id":2,"x":1, "y":15, "label":"Debakcy Channel"},
-    {"id":3, "x":1, "y":16, "label":"Athema Ruins"},
-    {"id":4, "x":2, "y":14, "label":"Haotas Ravine"},
-    {"id":10, "x":2, "y":17, "label":"Zoktzda Ruins"},
-    {"id":5, "x":3, "y":15, "label":"Rugio Ruins"},
-    {"id":6, "x":3, "y":14, "label":"Strum Road"},
-    {"id":7, "x":3, "y":13, "label":"Marbaro Forest"},
-    {"id":8, "x":3, "y":16, "label":"Suedor Cliff"},
-    {"id":9, "x":3, "y":17, "label":"Rinom Plains"},
-    {"id":11, "x":3, "y":18, "label":"Ribisco Cave"},
+    {"id":1, "x":0, "y":15, "label":"Aulada Ancient Tower", "d": {
+        a:["Aulauda Ancient Tower", "Observation Deck"], 
+        b:["Seltirio", "Astol"], 
+        m:["Rutiro", "Gold Jelly", "Tower Ghost"]}},
+
+    {"id":2,"x":1, "y":15, "label":"Debakcy Channel", "d": {
+        a:["Debakcy Channel", "Basement 1", "Basement 2"], 
+        b:["Silver Roar"],
+        m:["Corda", "Blue Jelly", "Ruin Rat"]}},
+
+    {"id":3, "x":1, "y":16, "label":"Athema Ruined Town", "d": {
+        a:["Athema Ruined Town", "Area 2"], 
+        b:["King Potum", "Crimsosch"], 
+        m:["Vanilla Potum", "Kijimu", "Rio Frosch"]}},
+
+    {"id":4, "x":2, "y":14, "label":"Haotas Ravine", "d": {
+        a:["Haotas Ravine", "Deepest Part"], 
+        b:["Warmonger"], 
+        m:["Pain Leaf", "White Hound", "Fin Frog"]}},
+
+    {"id":10, "x":2, "y":17, "label":"Zoktzda Ruins", "d": {
+        a:["Zoktzda Ruins", "Abnormal Space", "Reserved Hall"], 
+        b:["Stone Mercenary", "Ruin Golem"], 
+        m:["Goblin", "Skeleton", "Green Jelly", "Wind Roar", "Stone"]}},
+
+    {"id":5, "x":3, "y":15, "label":"Rugio Ruins", "d": {
+        a:["Rugio Ruins"], 
+        b:["Boss Colon"], 
+        m:["Colong", "Raffy", ""]}},
+
+    {"id":6, "x":3, "y":14, "label":"Strum Road", "d": {
+        a:["Strum Road"], 
+        b:["Colo Commander"], 
+        m:["Colon", "Kijimu", "Helm Colon"]}},
+
+    {"id":7, "x":3, "y":13, "label":"Marbaro Forest", "d": {
+        a:["Marbaro Forest", "Deepest Part"], 
+        b:["Forest Wolf"], 
+        m:["Colon", "Helm Colon", "Pico"]}},
+
+    {"id":8, "x":3, "y":16, "label":"Suedor Cliff", "d": {
+        a:["Suedor Cliff"],
+        b:[], 
+        m:["Colon", "Raffy", "Kijimu"]}},
+
+    {"id":9, "x":3, "y":17, "label":"Rinom Plains", "d": {
+        a:["Rinom Plains"], 
+        b:["B.B. Goblin"], 
+        m:["Goblin", "Pico", "Kijimu"]}},
+
+    {"id":11, "x":3, "y":18, "label":"Ribisco Cave", "d": {
+        a:["Area 1", "Area 2", "Area 3", "Deepest Part"], 
+        b:["Boss Goblin"], 
+        m:["Frosch", "Goblin"]}},
 
 
 
-    {"id":33, "x":4, "y":13, "label":"New Moon Palace"},
-    {"id":31, "x":4, "y":14, "label":"Lutaros Cavern"},
-    {"id":13, "x":4, "y":15, "label":"Nisel Mountain"},
-    {"id":12, "x":4, "y":16, "label":"Icule Lake"},
-    {"id":22, "x":4, "y":17, "label":"Saham Underground Cave"},
-    {"id":21, "x":4, "y":18, "label":"Saham Crater"},
-    {"id":32, "x":5, "y":13, "label":"Nehelo Swamp"},
-    {"id":30, "x":5, "y":14, "label":"Yorl Highlands"},
-    /*{"id":24, "x":6, "y":15, "label":"Underground Channel"},*/
-    {"id":14, "x":5, "y":16, "label":"Ruined Temple Town"},
-    {"id":16, "x":5, "y":17, "label":"Ruined Temple"},
-    {"id":20, "x":5, "y":18, "label":"Korda Basin"},
-    {"id":29, "x":6, "y":14, "label":"Land of Chaos"},
-    {"id":23, "x":6, "y":15, "label":"Sofya City"},
-    {"id":15, "x":6, "y":16, "label":"Rakau Plains"},
-    {"id":17, "x":6, "y":17, "label":"Reug Salt Plains Wanderers Camp"},
-    {"id":19, "x":6, "y":18, "label":"Longo Canyon"},
+
+
+    {"id":33, "x":4, "y":13, "label":"New Moon Palace", "d": {
+        a:["New Moon Palace", "1st Chamber", "2nd Chamber", "Innermost"], 
+        b:["Mauez"], 
+        m:["Mage Marionette", "Stone", "Swoard Marionette", "Palace Solider"]}},
+
+    {"id":31, "x":4, "y":14, "label":"Lutaros Cavern", "d": {
+        a:["Lutaros Cavern", "Basement 1", "Basement 2", "Deepest Part"], 
+        b:["Ooze"], 
+        m:["Stone Solider", "Voda Road", "Slime", "Turquoise Lionfish"]}},
+
+    {"id":13, "x":4, "y":15, "label":"Nisel Mountain", "d": {
+        a:["Nisel Mountain", "Mountainside", "Near the Summit", "Summit"], 
+        b:["Giant Boar", "Brutal Dragon Decel"], 
+        m:["Shell Mask", "Little Boar", "Boar", "Rutin"]}},
+
+    {"id":12, "x":4, "y":16, "label":"Icule Lake", "d": {
+        a:["Icule Lake"], 
+        b:["Tortuga"], 
+        m:["Cobre", "Frosch", "Miwi"]}},
+
+    {"id":22, "x":4, "y":17, "label":"Saham Underground Cave", "d": {
+        a:["Basement 1", "Basement 2", "Basement 3", "Deepest Part"], 
+        b:["Boss Roga", "Naiata"], 
+        m:["Rotten Nemico", "Orc Warrior", "Gob Roga"]}},
+
+    {"id":21, "x":4, "y":18, "label":"Saham Crater", "d": {
+        a:["Saham Crater"], 
+        b:["Mutant Goblin", "Demon's Gate"], 
+        m:["Mutant Goblin", "Orc", "Flame Roar"]}},
+
+    {"id":32, "x":5, "y":13, "label":"Nehelo Swamp", "d": {
+        a:["Nehelo Swamp"], 
+        b:[], 
+        m:["Kinote", "Water Ghost", "Moss Ball"]}},
+
+    {"id":30, "x":5, "y":14, "label":"Yorl Highlands", "d": {
+        a:["Yorl Highlands"], 
+        b:["Arcoiris"], 
+        m:["Billy", "Squire", "Conoppy"]}},
+
+    {"id":14, "x":5, "y":16, "label":"Ruined Temple Town", "d": {
+        a:["Ruines Temple Town"], 
+        b:[], 
+        m:["Beak", "Raffy", "Lavarca", "Farfalla"]}},
+
+    {"id":16, "x":5, "y":17, "label":"Ruined Temple", "d": {
+        a:["Area 1", "Area 2", "Area 3", "Forbidden Hall"], 
+        b:["Miracle Potum", "Minotaur"], 
+        m:["Beak", "Goblin", "Guardian Statue", "Roar"]}},
+
+    {"id":20, "x":5, "y":18, "label":"Korda Basin", "d": {
+        a:["Korda Basin"], 
+        b:[], 
+        m:["Ratia", "Soda Potum", "Kijimu", "Aqua Jelly"]}},
+
+    {"id":29, "x":6, "y":14, "label":"Land of Chaos", "d": {
+        a:["Land of Chaos"], 
+        b:[], 
+        m:["Elizard", "Rutin", "Squire"]}},
+
+    {"id":23, "x":6, "y":15, "label":"Sofya City", "d": {
+        a:["Sofy Citiy", "Underground Channel"], 
+        b:["Gespenst"], 
+        m:["Corda", "Blue Jelly", "Ghost"]}},
+
+    {"id":15, "x":6, "y":16, "label":"Rakau Plains", "d": {
+        a:["Rakau Plains"], 
+        b:[], 
+        m:["Raffy", "Pico", "Lavarca", "Pomum", "Piedra"]}},
+
+    {"id":17, "x":6, "y":17, "label":"Reug Salt Plains Wanderers Camp", "d": {
+        a:["Reug Salt Plains Wanderers Camp"], 
+        b:[], 
+        m:["Piedra", "Pomum", "Wooly", "Night Mushroom"]}},
+
+    {"id":19, "x":6, "y":18, "label":"Longo Canyon", "d": {
+        a:["Longo Canyon"], 
+        b:[], 
+        m:["Euris", "Pova", "Cliff Pico"]}},
 
 
 
-    {"id":54, "x":7, "y":12, "label":"Magic Waste Site"},
-    {"id":28, "x":7, "y":13, "label":"Fiery Volcano"},
-    {"id":27, "x":7, "y":14, "label":"Witeka Scorched Plains"},
-    {"id":25, "x":7, "y":15, "label":"Land under Developement"},
-    {"id":47, "x":7, "y":16, "label":"Gate of Another World"},
-    {"id":18, "x":7, "y":17, "label":"Isthmus of Kaus"},
-    {"id":53, "x":8, "y":12, "label":"Teaus Hill"},
-    {"id":35, "x":8, "y":13, "label":"Scaro Town"},
-    {"id":34, "x":8, "y":14, "label":"Douce Hamlet"},
-    {"id":26, "x":8, "y":15, "label":"Underground Ruins"},
-    {"id":46, "x":8, "y":16, "label":"Road to Another world"},
-    {"id":45, "x":8, "y":17, "label":"Vyshed the Tainted Land"},
-    {"id":51, "x":9, "y":12, "label":"Wanderers' Plains"},
-    {"id":52, "x":9, "y":13, "label":"El Scaro"},
-    {"id":36, "x":9, "y":14, "label":"Darkanon Plain"},
-    {"id":37, "x":9, "y":15, "label":"Centerio Highlands"},
-    {"id":38, "x":9, "y":16, "label":"Ancient Empress's Tomb"},
-    {"id":44, "x":9, "y":17, "label":"Fabizo Boundary"},
-    {"id":49, "x":10, "y":12, "label":"Gravel Terrace"},
-    {"id":48, "x":10, "y":13, "label":"Maia Diela"},
-    {"id":39, "x":10, "y":14, "label":"Harde Hill"},
-    {"id":40, "x":10, "y":15, "label":"Figo's Manor"},
-    {"id":42, "x":10, "y":16, "label":"Ethos Fortress"},
-    {"id":43, "x":10, "y":17, "label":"Lost Town"},
-    {"id":50, "x":11, "y":12, "label":"Akaku Desert"},
-    {"id":41, "x":11, "y":15, "label":"Land Under Cultivation"},
+
+
+    {"id":54, "x":7, "y":12, "label":"Magic Waste Site", "d": {
+        a:["Area 1", "Area 2", "Area 3", "Deepest Part"], 
+        b:["Scrader"], 
+        m:["Murin", "Helmcoon", "Orange Jelly", "Cursed Clock", "Duston"]}},
+
+    {"id":28, "x":7, "y":13, "label":"Fiery Volcano", "d": {
+        a:["Area 1", "Area 2", "Area 3", "Lava Trail"], 
+        b:["Mochelo", "Flare Volg"], 
+        m:["Red Jelly", "Savaran", "Fire Ghost", "Stone Knight", "Flame Butterfly"]}},
+
+    {"id":27, "x":7, "y":14, "label":"Witeka Scorched Plains", "d": {
+        a:["Witeka Scorched Plains"], 
+        b:[], 
+        m:["Roca", "Savaran", "Calron"]}},
+
+    {"id":25, "x":7, "y":15, "label":"Land under Developement", "d": {
+        a:[], 
+        b:["Boss Colon"], 
+        m:["Colon", "Shell Mask"]}},
+
+    {"id":47, "x":7, "y":16, "label":"Gate of Another World", "d": {
+        a:["Area 1", "Area 2", "Front"], 
+        b:["Outerworld Wolf", "Nurethoth"], 
+        m:["Glow Ray", "Planet Head"]}},
+
+
+
+
+    {"id":18, "x":7, "y":17, "label":"Isthmus of Kaus", "d": {
+        a:["Istmus of Kaus", "Dragon's Den"], 
+        b:["Eerie Crystal"], 
+        m:["Hound", "Pain Leaf", "Purple Jelly"]}},
+
+    {"id":53, "x":8, "y":12, "label":"Teaus Hill", "d": {
+        a:["Teaus Hill", "Marshland", ], 
+        b:[], 
+        m:["Kinote", "Jelfy", "Serpain", "Verdesch"]}},
+
+    {"id":35, "x":8, "y":13, "label":"Scaro Town", "d": {
+        a:["Area 1", "Area 2", "Central Part"], 
+        b:["Ganlef"], 
+        m:["Beak", "Solider Rat", "Death Hound", "Devil's Book"]}},
+
+    {"id":34, "x":8, "y":14, "label":"Douce Hamlet", "d": {
+        a:["Douce Hamlet"], 
+        b:["Big Coryn"], 
+        m:["Wooly", "Crow Killer", "Coryn"]}},
+
+    {"id":26, "x":8, "y":15, "label":"Underground Ruins", "d": {
+        a:["Underground Ruins", "Basement 1", "Basement 2", "Deepest Part"], 
+        b:["Excavated Golem"], 
+        m:["Ruin Rat", "Torpo", "Nemico"]}},
+
+    {"id":46, "x":8, "y":16, "label":"Road to Another world", "d": {
+        a:["Area 1", "Area 2"], 
+        b:[], 
+        m:["Astron", "Kijimu", "White Jelly"]}},
+
+    {"id":45, "x":8, "y":17, "label":"Vyshed the Tainted Land", "d": {
+        a:["Area 1", "Area 2", "Albatif Village"], 
+        b:["Death Colon", "Grass Dragon Yelb"], 
+        m:["Colon Zombie", "Abyss Eye", "Moss Mushroom"]}},
+
+    {"id":51, "x":9, "y":12, "label":"Wanderers' Plains", "d": {
+        a:["Wanderers' Plains"], 
+        b:["Grylle"], 
+        m:["Greg", "Tulin", "Coryn"]}},
+
+    {"id":52, "x":9, "y":13, "label":"El Scaro", "d": {
+        a:["El Scaro"], 
+        b:[], 
+        m:[]}},
+
+    {"id":36, "x":9, "y":14, "label":"Darkanon Plain", "d": {
+        a:["Darkanon Plain"], 
+        b:[], 
+        m:["Farfalla", "Violaccoon", "Pojo", "Rocksaur"]}},
+
+    {"id":37, "x":9, "y":15, "label":"Centerio Highlands", "d": {
+        a:["Centerio Highlands"], 
+        b:["Sand Mole"], 
+        m:["Sand Frosch", "Foxiger"]}},
+
+    {"id":38, "x":9, "y":16, "label":"Ancient Empress's Tomb" , "d": {
+        a:["Area 1", "Area 2", "Area 3", "Deepest Part"], 
+        b:["Ancient Empress"], 
+        m:["Bone Dragonewt", "Black Jelly", "Cassy", "Nightmare Roar", ""]}},
+
+    {"id":44, "x":9, "y":17, "label":"Fabizo Boundary", "d": {
+        a:["Fabizo Boundary"], 
+        b:[], 
+        m:["Basalt", "Larmo", "Glasch"]}},
+
+    {"id":49, "x":10, "y":12, "label":"Gravel Terrace", "d": {
+        a:["Gravel Terrace"], 
+        b:["Jade Raptor", "Goldoon"], 
+        m:["Mewte", "Miragela", "Rock Stinger"]}},
+
+    {"id":48, "x":10, "y":13, "label":"Maia Diela", "d": {
+        a:["Maia Delia"], 
+        b:[], 
+        m:["Flying Egg", "Rodentail", "Ghilly"]}},
+
+    {"id":39, "x":10, "y":14, "label":"Harde Hill", "d": {
+        a:["Harde Hill"], 
+        b:[], 
+        m:["Berryy Pomum", "Salliphant", "Arborgon", ""]}},
+
+    {"id":40, "x":10, "y":15, "label":"Figo's Manor", "d": {
+        a:["Figo's Manor"], 
+        b:[], 
+        m:["Crow Destroyer", "Maple Fox", "Floral Bee"]}},
+
+    {"id":42, "x":10, "y":16, "label":"Ethos Fortress", "d": {
+        a:["Ethos Fortress"], 
+        b:[], 
+        m:["Death Zombeast", "Flying Quertz", "Gob Roga"]}},
+
+    {"id":43, "x":10, "y":17, "label":"Lost Town", "d": {
+        a:["Lost Town", "Square", "Magic Barrier"], 
+        b:["Pillar Golem"], 
+        m:["Wandering Shadow", "Death Hound", "Parasitized Dog"]}},
+
+    {"id":50, "x":11, "y":12, "label":"Akaku Desert", "d": {
+        a:["Area 1", "Area 2", "w", "Akaku Downtown", "Akaku Downtown Palace"], 
+        b:["Metal Stinger", "Goovua"], 
+        m:["Kiliznar", "Scalar Roar", "Sand Anglerfish", "Mudrosche"]}},
+
+    {"id":41, "x":11, "y":15, "label":"Land Under Cultivation", "d": {
+        a:["Area 1", "Area 2", "Area 3", "Hill"], 
+        b:["Masked Warrior"], 
+        m:["Pojo", "Green Boar", "Owl", "Lime wPotum"]}},
+
+
 
 
 
@@ -173,6 +390,8 @@ const nodes = new vis.DataSet([
 
 
 
+
+
     {"id":77, "x":6, "y":7, "label":"Singolare Ruins", "d": {
         a:["1st Floor", "2nd Floor", "3rd Floor"], 
         b:["Proto Leon"], 
@@ -203,7 +422,11 @@ const nodes = new vis.DataSet([
         b:["Iconos"], 
         m:["Greg", "Ornis Demi Mahina"]}},
 
-    {"id":70, "x":7, "y":9, "label":"Fort Solfini"},
+    {"id":70, "x":7, "y":9, "label":"Fort Solfini", "d": {
+        a:["Wall", "Outside", "Inside", "Roof"], 
+        b:["Inzanio the Dark Knight", "Twilight Dragon"], 
+        m:["Goblin", "Frosti", "Skeleton", "Pawn"]}},
+
     {"id":97, "x":8, "y":5, "label":"Tolbas Grassland", "d": {
         a:["Tolbas Grassland"], 
         b:[], 
@@ -214,11 +437,22 @@ const nodes = new vis.DataSet([
         b:[], 
         m:["Senie", "Tnark", "Female Blacksmith", "Woman in Need", "Young Man", "Yumomo"]}},
 
-    {"id":69, "x":8, "y":9, "label":"Polde Ice Valley"}, // TODO: Continue going south
+    {"id":69, "x":8, "y":9, "label":"Polde Ice Valley", "d": {
+        a:["Polde Ice Valley"], 
+        b:["Don Yeti"], 
+        m:["Little Snow Boar", "Yeti", "Milk Potum", "Rabby"]}},
 
-    {"id":57, "x":8, "y":10, "label":"Calle Mort"},
+    {"id":57, "x":8, "y":10, "label":"Calle Mort", "d": {
+        a:["Calle Mort"], 
+        b:[], 
+        m:["Chandler", "Ghost Potum", "Phobos"]}},
 
-    {"id":55, "x":8, "y":11, "label":"Dunkel Valley"},
+    {"id":55, "x":8, "y":11, "label":"Dunkel Valley", "d": {
+        a:["Dunkel Valley"], 
+        b:[], 
+        m:["Fimera", "Ropple"]}},
+
+
 
 
 
@@ -227,52 +461,111 @@ const nodes = new vis.DataSet([
         b:["Grimuckus"], 
         m:["Tulin", "Biped Frog", "Muckus"]}},
 
-    {"id":135, "x":9, "y":8, "label":"Celarra Plateau"},
+    {"id":135, "x":9, "y":8, "label":"Celarra Plateau" , "d": {
+        a:["Celarra Plateau"], 
+        b:[], 
+        m:["Ovinymon", "Shroomymon", "Arbonymon"]}},
 
-    {"id":132, "x":9, "y":9, "label":"Lunagent Cliff Base"},
+    {"id":132, "x":9, "y":9, "label":"Lunagent Cliff Base", "d": {
+        a:["Lunagent Cliff Base"], 
+        b:[], 
+        m:["Flooray", "Necrome", "Porgy"]}},
 
-    {"id":58, "x":9, "y":10, "label":"Lunagent Mountain"},
+    {"id":58, "x":9, "y":10, "label":"Lunagent Mountain", "d": {
+        a:["Area 1", "Area 2", "Area 3", "Summit"], 
+        b:["Evil Crystal Beast"], 
+        m:["Phobos", "Noir Nemico", "Hangged Mummy", "Soul Reaper"]}},
 
-    {"id":56, "x":9, "y":11, "label":"Abyss of No Return"},
+    {"id":56, "x":9, "y":11, "label":"Abyss of No Return", "d": {
+        a:["Area 1", "Area 2", "Area 3", "Deepest Part"], 
+        b:["Black Knight of Delusion"], 
+        m:["Shell Mask", "Targa", "Shell Kraken", "Gramp"]}},
 
     {"id":99, "x":10, "y":5, "label":"Eryldan Street", "d": {
         a:["Area 1", "Area 2", "Area 3", "Near the Forest of Ein"], 
         b:["Tuscog"], 
         m:["Mille", "Antbee", "Roca", "Wolfret"]}},
 
-    {"id":136, "x":10, "y":8, "label":"Arche Valley"},
+    {"id":136, "x":10, "y":8, "label":"Arche Valley", "d": {
+        a:["Area 1", "Area 2", "Area 3", "Depths"], 
+        b:["Arachnidemon"], 
+        m:["Sumari", "Fronymon", "Besy"]}},
 
-    {"id":133, "x":10, "y":9, "label":"Inje Village"},
+    {"id":133, "x":10, "y":9, "label":"Inje Village", "d": {
+        a:["Inje Village"], 
+        b:[], 
+        m:["Flooray", "Climber Potum"]}},
 
-    {"id":130, "x":10, "y":10, "label":"Geist Desert"},
+    {"id":130, "x":10, "y":10, "label":"Geist Desert", "d": {
+        a:["Area 1", "Area 2", "Area 3", "Depths"], 
+        b:["Sand Bandtis Leader", "Vulture"], 
+        m:["Sand Bandits Potum", "Sand Bandits Chopper", "Sand Bandits Gan"]}},
 
-    {"id":129, "x":10, "y":11, "label":"Lunagent Cliff Base"},
+    {"id":129, "x":10, "y":11, "label":"Inanis Wilderness", "d": {
+        a:["Inanis Wilderness"], 
+        b:[], 
+        m:["Coronella", "Minimyu", "Sandsaur"]}},
 
-    {"id":134, "x":11, "y":9, "label":"Ducia Coast"},
+    {"id":134, "x":11, "y":9, "label":"Ducia Coast", "d": {
+        a:["Area 1", "Area 2", "Area 3"], 
+        b:["Pisteus"], 
+        m:["Porgy", "Cabello", "Lutris", "Depths"]}},
 
 
 
-    {"id":68, "x":13, "y":9, "label":"Plastida"},
 
-    {"id":59, "x":13, "y":10, "label":"Dark Wasteland"},
 
-    {"id":60, "x":13, "y":11, "label":"Dark Castle"},
+    {"id":68, "x":13, "y":9, "label":"Plastida", "d": {
+        a:["Area 1", "Area 2", "Deepest Part"], 
+        b:["Imitator"], 
+        m:["Strange Tentacle", "Wandering Life Form", "Blood Draining Jelly", "Flying Crystal"]}},
 
-    {"id":67, "x":14, "y":9, "label":"Dark Manor"},
+    {"id":59, "x":13, "y":10, "label":"Dark Wasteland", "d": {
+        a:["Dark Wasteland"], 
+        b:[], 
+        m:["Parasiztized Dog", "Corroded Fighter", "Corrded Knight"]}},
 
-    {"id":61, "x":14, "y":10, "label":"Garden of Beginning"},
+    {"id":60, "x":13, "y":11, "label":"Dark Castle", "d": {
+        a:["Area 1", "Area 2", "Area 3", "Grand Hall"], 
+        b:["Memecoleous", "Imitacia"], 
+        m:["Controlled Knight", "Controlled Fighter", "Shadow Fly", "Corroded Sentry Knight", "Corroded Sentry Fighter", "Manticore"]}},
 
-    /*{"id":59, "x":14, "y":11, "label":"Spring of Rebirth"},*/ // TODO: CHECK IF OVERLAPP
-    {"id":66, "x":15, "y":8, "label":"Cradle of Soldiers"},
+    {"id":67, "x":14, "y":9, "label":"Dark Manor", "d": {
+        a:["Area 1", "Area 2"], 
+        b:["Corroded Knight Captain"], 
+        m:["Corroded Brawler", "Evil Dark Book", "Corroded Shielder", ""]}},
 
-    {"id":65, "x":15, "y":9, "label":"Trace of Dark River"},
+    {"id":61, "x":14, "y":10, "label":"Garden of Beginning", "d": {
+        a:["Garden of Beginning"], 
+        b:["Nightmare Potum"], 
+        m:["Ghost Potum"]}},
 
-    {"id":63, "x":15, "y":10, "label":"Dark Mirror"},
+    {"id":1059, "x":14, "y":11, "label":"Spring of Rebirth", "d": { // TODO: CHECK IF OVERLAPP / FIX ID!
+        a:["Lower", "Middle", "Upper", "Top"], 
+        b:["Daddy Finpen", "Cerberus"], 
+        m:["Corroded Fighter", "Corroded Knight", "Finpen", "Jewel Eye"]}},
+
+    {"id":66, "x":15, "y":8, "label":"Cradle of Soldiers", "d": {
+        a:["Entrance", "Inside", "Deepest Part"], 
+        b:["Bexiz"], 
+        m:["Pecora", "Flying Executioner", "Corroded Fighter", "Moxiz"]}},
+ 
+    {"id":65, "x":15, "y":9, "label":"Trace of Dark River", "d": {
+        a:["Trace of Dark River"], 
+        b:["Lapin the Necromancer"], 
+        m:["Corroded Knight", "Bunny Summoner", "Infested Mushroom", "Ogler"]}},
+
+    {"id":63, "x":15, "y":10, "label":"Dark Mirror", "d": {
+        a:["Dark Mirror"], 
+        b:["Zolban the Dark Captain of Wind"], 
+        m:["Corroded Fighter", "Sunion"]}},
 
     {"id":64, "x":16, "y":10, "label":"Garden of Sublimation", "d": {
-        a:[], 
-        b:[], 
-        m:[]}},
+        a:["Area 1", "Area 2", "Area 3", "Central Part"], 
+        b:["Aranea"], 
+        m:["Corroded Fighter", "Corroded Knight", "Kodama", "Shiny Roar", "Aramia"]}},
+
+
 
 
 
@@ -336,7 +629,7 @@ const nodes = new vis.DataSet([
         b:["Grim Reaper Scarecrow", "Hexter"], 
         m:["Eerie Scarecrow", "Bayaga", "Enty"]}},
 
-    {"id":1116, "x":6, "y":0, "label":"Dark Dragon Shrine", "d": { /**TODO: FIX ID! */
+    {"id":116, "x":6, "y":0, "label":"Dark Dragon Shrine", "d": {
         a:["Lower", "Middle", "Upper", "Near the Top", "Elf Mountains Watchtower"], 
         b:["Finstern the Dark Dragon"], 
         m:["Soul Reaper", "Death Hound", "Ivy", "Baby Finstern"]}},
@@ -346,7 +639,7 @@ const nodes = new vis.DataSet([
         b:["Crystal Titan"], 
         m:["Tehon", "Leaf Ghost", "Fanalizard", "Shark Wolf", "Fanadon"]}},
 
-    {"id":116, "x":6, "y":4, "label":"Nov Saterica", "d": {
+    {"id":1116, "x":6, "y":4, "label":"Nov Saterica", "d": { // TODO: FIX ID
         a:["Nov Saterica"], 
         b:[], 
         m:["Sentry", "General Store Litoa"]}},
@@ -371,6 +664,8 @@ const nodes = new vis.DataSet([
         b:[], 
         m:["Pelle", "Molemet", "Solopy", "Light Angler", "Rockmadillo", "Comraby"]}},
     
+
+
 
 
     {"id":118, "x":9, "y":3, "label":"Fractum Sector", "d": {
@@ -442,7 +737,6 @@ const nodes = new vis.DataSet([
 const edges = new vis.DataSet([
     {from: 1, to: 2},
     {from: 2, to: 3},
-    {from: 2, to: 4},
     {from: 2, to: 5},
     {from: 4, to: 5},
     {from: 5, to: 6},
@@ -577,14 +871,15 @@ const edges = new vis.DataSet([
     {from: 139, to: 140},
     {from: 106, to: 109},
     {from: 109, to: 110},
+    {from: 110, to: 111},
     {from: 111, to: 112},
     {from: 112, to: 113},
     {from: 113, to: 114},
     {from: 114, to: 115},
-    {from: 115, to: 1116},
+    {from: 115, to: 116},
 
-    {from: 105, to: 116},
-    {from: 103, to: 116},
+    {from: 105, to: 1116},
+    {from: 103, to: 1116},
 
     {from: 59, to: 60},
     {from: 59, to: 61},
