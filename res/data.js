@@ -1,4 +1,4 @@
-// This File contains the raw data of Iruna-Map.
+// This File contains the raw data.
 // Structure:
 // const networkdata = { 
 //  nodes: const nodes = new vis.DataSet([... {id: id, x:grid_x, y:grid_y, label:name, d:{
@@ -10,6 +10,10 @@
 //
 
 const nodes = new vis.DataSet([
+
+///////////////////////////////////////////////////////////////////////////////
+// HERE STARTS THE IRUNA WORLD
+///////////////////////////////////////////////////////////////////////////////
  
     {"id":1, "x":0, "y":15, "label":"Aulada Ancient Tower", "d": {
         "a":["Aulauda Ancient Tower", "Observation Deck"], 
@@ -739,10 +743,408 @@ const nodes = new vis.DataSet([
     {"id":126, "x":13, "y":4, "label":"Deltzon Research Zone", "d": {
         "a":["Area 1", "Area 2", "Area 3", "Deepest Area"], 
         "b":["Repthon"], 
-        "m":["Swirly Whirly", "Corphibi", "Monoglare"]}}
+        "m":["Swirly Whirly", "Corphibi", "Monoglare"]}},
+
+///////////////////////////////////////////////////////////////////////////////
+// HERE STARTS THE TORAM WORLD
+// ID: >= 1000
+// x >= 25
+///////////////////////////////////////////////////////////////////////////////
+    {"id":1001, "x":25, "y":7, "label":"Operation Zone", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1002, "x":26, "y":7, "label":"Freight Corridor", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+    
+    {"id":1003, "x":27, "y":5, "label":"Weredragons' Vital Point", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1004, "x":27, "y":6, "label":"Stairway to Vital Point", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1005, "x":27, "y":7, "label":"Nebula Plain", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1006, "x":27, "y":8, "label":"Boma Moja", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1007, "x":28, "y":4, "label":"Frozen Falls", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1008, "x":28, "y":5, "label":"Algid Passage", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1009, "x":28, "y":6, "label":"Jabali Kubwa", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1010, "x":28, "y":7, "label":"Draco Town", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1011, "x":28, "y":9, "label":"Buma Konda", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+    
+    {"id":1012, "x":29, "y":1, "label":"Eumano Glade", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1013, "x":29, "y":2, "label":"Prime Ramus", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1014, "x":29, "y":4, "label":"Divido Valley", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1015, "x":29, "y":5, "label":"Arstida", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1016, "x":29, "y":6, "label":"Kabla Jabali", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+    
+    {"id":1017, "x":29, "y":7, "label":"Weredragon's Throat", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1018, "x":29, "y":8, "label":"Tunnel of Trails", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1019, "x":29, "y":9, "label":"Boma Konda: Entrance", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1020, "x":30, "y":1, "label":"Storage Yard", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1021, "x":30, "y":2, "label":"Country Road", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1022, "x":30, "y":3, "label":"Erva Tronc", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+    
+    {"id":1023, "x":30, "y":4, "label":"Flumen Plains", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1024, "x":30, "y":5, "label":"Vulcani Foothills", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1025, "x":30, "y":6, "label":"Vulcani Underground Passage", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+    
+    {"id":1026, "x":30, "y":7, "label":"Milcaska Falls", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1027, "x":30, "y":8, "label":"Propulsion System Zone", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1028, "x":31, "y":3, "label":"Guardian Forest", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1029, "x":31, "y":4, "label":"Movere Specula", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+    
+    {"id":1030, "x":31, "y":5, "label":"Mt. Vulcani", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1031, "x":31, "y":6, "label":"Vulcani Crater Base", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1032, "x":32, "y":4, "label":"Fugitive Lake Swamp", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1033, "x":32, "y":5, "label":"Noisy Woodland", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1034, "x":33, "y":5, "label":"Mana Waterfront", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+    
+
+
+    
+
+    {"id":1100, "x":33, "y":7, "label":"Wind Ark", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+
+
+
+
+    {"id":1101, "x":32, "y":9, "label":"Labrum Atoll", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+    
+    {"id":1102, "x":32, "y":11, "label":"Marinatown", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1103, "x":33, "y":9, "label":"Puerta Islands", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1104, "x":33, "y":10, "label":"Subma Cave", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1105, "x":33, "y":11, "label":"Carretera Mar", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1106, "x":34, "y":10, "label":"Espuma Dome", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1107, "x":34, "y":11, "label":"Aquacity", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+    
+    {"id":1108, "x":34, "y":12, "label":"Pipeline Corridor", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1109, "x":34, "y":13, "label":"Little Shrine of Grace", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1110, "x":35, "y":11, "label":"Seabed", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1111, "x":35, "y":12, "label":"Path of the Seep Sea", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1112, "x":35, "y":13, "label":"Deep Sea", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1113, "x":36, "y":11, "label":"Abandoned District", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+    
+
+
+
+    {"id":1200, "x":34, "y":5, "label":"Lixaro Ghost Town", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1201, "x":35, "y":5, "label":"Lixaro Ghost Town: Entrance", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1202, "x":35, "y":6, "label":"Vanek Plains", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1203, "x":35, "y":7, "label":"Afval Uplands", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1204, "x":36, "y":4, "label":"Eumano Village Ruins", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1205, "x":36, "y":5, "label":"Perdida Wasteland", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1206, "x":36, "y":6, "label":"Menabra Plains", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+    
+    {"id":1207, "x":37, "y":4, "label":"Siccus Plains", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1208, "x":37, "y":6, "label":"Latum Wetlands", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1209, "x":37, "y":7, "label":"Div Aqua Jungle", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1210, "x":38, "y":4, "label":"Umidus Valley", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1211, "x":38, "y":6, "label":"Aquastida", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1212, "x":38, "y":7, "label":"Vicus Mutans", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    
+
+
+    
+    {"id":1300, "x":41, "y":4, "label":"Lakas Coast", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1301, "x":42, "y":4, "label":"Nebbia Coast", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1302, "x":43, "y":0, "label":"Wizka Forest", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1303, "x":43, "y":4, "label":"Raden Tower: Entrance", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1304, "x":43, "y":5, "label":"Raden Tower", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+    
+    {"id":1305, "x":44, "y":0, "label":"Ruhig Trail", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1306, "x":44, "y":2, "label":"Floriso Trail", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1307, "x":44, "y":3, "label":"Rode Zaag Range", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1308, "x":44, "y":4, "label":"Asezara Plains", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1309, "x":44, "y":5, "label":"Raden Tower: Air Vent", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1310, "x":45, "y":0, "label":"Grazen Forecount", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1311, "x":45, "y":1, "label":"Izulara Underground Passage", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1312, "x":45, "y":2, "label":"Fango Village", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}},
+
+    {"id":1313, "x":46, "y":0, "label":"Grazen Tower", "d": {
+        "a":[], 
+        "b":[], 
+        "m":[]}}
 ]);
 
 const edges = new vis.DataSet([
+///////////////////////////////////////////////////////////////////////////////
+// HERE STARTS THE IRUNA WORLD
+///////////////////////////////////////////////////////////////////////////////
     {from: 1, to: 2},
     {from: 2, to: 3},
     {from: 2, to: 5},
@@ -893,7 +1295,100 @@ const edges = new vis.DataSet([
     {from: 63, to: 65},
     {from: 65, to: 66},
     {from: 65, to: 67},
-    {from: 67, to: 68}
+    {from: 67, to: 68},
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+// HERE STARTS THE TORAM WORLD
+///////////////////////////////////////////////////////////////////////////////
+    {from: 1001, to: 1002},
+    {from: 1002, to: 1005},
+    {from: 1005, to: 1006},
+    {from: 1005, to: 1004},
+    {from: 1004, to: 1003},
+    {from: 1005, to: 1010},
+
+    {from: 1007, to: 1008},
+    {from: 1008, to: 1009},
+
+    {from: 1009, to: 1016},
+    {from: 1010, to: 1017},
+
+    {from: 1011, to: 1019},
+    {from: 1012, to: 1013},
+    {from: 1016, to: 1017},
+    {from: 1017, to: 1018},
+    {from: 1018, to: 1019},
+    
+    {from: 1012, to: 1020},
+    {from: 1014, to: 1023},
+    {from: 1015, to: 1024},
+    {from: 1017, to: 1026},
+    {from: 1018, to: 1027},
+
+    {from: 1020, to: 1021},
+    {from: 1021, to: 1022},
+    {from: 1022, to: 1023},
+    {from: 1023, to: 1024},
+    {from: 1025, to: 1026},
+
+    {from: 1022, to: 1028},
+    {from: 1024, to: 1030},
+    {from: 1025, to: 1031},
+
+    {from: 1028, to: 1029},
+    {from: 1030, to: 1031},
+
+    {from: 1029, to: 1032},
+    {from: 1032, to: 1033},
+    {from: 1033, to: 1034},
+
+    {from: 1101, to: 1103},
+    {from: 1102, to: 1105},
+    
+    {from: 1103, to: 1104},
+    {from: 1104, to: 1106},
+    
+    {from: 1105, to: 1107},
+    {from: 1106, to: 1107},
+    {from: 1107, to: 1108},
+    {from: 1108, to: 1109},
+
+    {from: 1107, to: 1110},
+    {from: 1110, to: 1111},
+    {from: 1111, to: 1112},
+    {from: 1110, to: 1113},
+
+    {from: 1200, to: 1201},
+    {from: 1202, to: 1203},
+    {from: 1201, to: 1205},
+    {from: 1202, to: 1226},
+
+    {from: 1204, to: 1205},
+    {from: 1205, to: 1206},
+    {from: 1204, to: 1207},
+    {from: 1206, to: 1208},
+
+    {from: 1207, to: 1210},
+    {from: 1208, to: 1209},
+    {from: 1208, to: 1211},
+    {from: 1209, to: 1212},
+
+    {from: 1300, to: 1301},
+    {from: 1301, to: 1303},
+    {from: 1303, to: 1304},
+    {from: 1302, to: 1305},
+    {from: 1303, to: 1308},
+    {from: 1304, to: 1309},
+
+    {from: 1305, to: 1310},
+    {from: 1310, to: 1311},
+    {from: 1310, to: 1313},
+    {from: 1308, to: 1307},
+    {from: 1307, to: 1306},
+    {from: 1306, to: 1312},
+    {from: 1312, to: 1311},
 ]);
         
 const networkdata = { nodes: nodes, edges: edges };
