@@ -836,7 +836,7 @@ const nodes = new vis.DataSet([
         "b":[], 
         "m":["Stonzard", "Walkissa", "Stonezard", "Seaney", "Ocello"]}},
 
-    {"id":1018, "x":29, "y":8, "label":"Tunnel of Trails", "d": {
+    {"id":1018, "x":29, "y":8, "label":"Tunnel of Trials", "d": {
         "a":["Tunnel of Trails"], 
         "b":[], 
         "m":["Caverant", "Tailgon", "Laduro"]}},
